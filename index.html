@@ -79,6 +79,33 @@
 }
 @media(prefers-reduced-motion:reduce){.vbar{transition:none}.timeline-node,.safe-card{transition:none}}
 
+
+/* Supplied editorial images */
+.hero-photo{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:10px;min-width:0;margin:0}
+.hero-photo img{display:block;width:100%;height:clamp(320px,48vw,560px);object-fit:cover;object-position:center;border-radius:3px;box-shadow:0 22px 55px #102b4618}
+.hero-photo figcaption,.story-image figcaption,.portrait-placeholder figcaption{margin-top:9px;font: .75rem/1.5 var(--sans);color:var(--muted)}
+.hero-photo figcaption span,.story-image figcaption span{display:block;color:#738390;font-style:italic}
+.story-image{margin:30px 0 34px}
+.story-image img{display:block;width:100%;max-height:470px;object-fit:cover;border-radius:3px}
+.building-image img{max-height:390px;object-position:center 56%}
+.pain-image{max-width:100%;margin:32px 0 38px}
+.pain-image img{max-height:460px;object-position:center}
+.researcher-feature{display:grid;grid-template-columns:minmax(160px,.58fr) minmax(0,1.42fr);gap:clamp(22px,4vw,44px);align-items:start;margin:34px 0}
+.portrait-placeholder{margin:0;min-width:0}
+.portrait-placeholder img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:3px;background:#e5edf2}
+.researcher-copy{min-width:0}
+.researcher-copy .quote{margin-top:10px}
+@media(max-width:760px){
+ .hero-photo img{height:clamp(250px,75vw,410px)}
+ .researcher-feature{grid-template-columns:minmax(105px,.7fr) minmax(0,1.3fr);gap:18px}
+ .story-image{margin:24px 0}
+}
+@media(max-width:480px){
+ .researcher-feature{grid-template-columns:1fr}
+ .portrait-placeholder{max-width:220px}
+ .hero-photo img{height:270px}
+}
+
 </style>
 </head>
 <body>
@@ -90,20 +117,24 @@
 <p class="dek">University of Queensland researchers are developing SAFE, an endometriosis screening tool, as emerging Australian research highlights the psychological toll of waiting for a diagnosis.</p>
 <p class="byline">A reported interactive feature · By [Your name] · [Publication / course]</p>
 <div class="editor-note"><strong>Working draft</strong>Replace bracketed prompts with verified reporting and approved quotes. Check every statistic against its original source before publication.</div></div>
-<div class="hero-art" role="img" aria-label="Abstract blue circles representing the search for answers"><div class="ring"><div class="ring-label">The search for an explanation</div></div><div class="art-note">When symptoms are real, but answers remain uncertain.</div></div>
+<figure class="hero-art hero-photo"><img src="image015-1.avif" alt="Modern university research building photographed at dusk; confirm the exact building and location before publication"><figcaption>University research context <span>[Confirm building name, location and image credit]</span></figcaption></figure>
 <div class="scroll-cue">↓ Scroll to explore the story</div>
 </section>
 <main>
 <section class="section narrow reveal" id="safe">
 <div class="kicker">01 / The research</div><h2>Could SAFE help identify risk earlier?</h2>
 <p class="intro">A screening approach developed by University of Queensland researchers could offer another way to identify people who may be at risk of endometriosis and prompt further investigation.</p>
+<figure class="story-image building-image"><img src="image015-1.avif" alt="University research building with glass entrance and surrounding trees"><figcaption>Research into endometriosis screening at the University of Queensland <span>[Confirm this is the correct building; add the photographer or source credit.]</span></figcaption></figure>
 <p>[Lead with your interview with Dr Sally Mortlock: explain what SAFE is, what problem the research aims to address and what stage the work has reached. Include the most newsworthy verified detail, such as any confirmed GP implementation or research milestone.]</p>
 <p>But screening is not diagnosis. SAFE's potential significance — and its limits — matter when considering what earlier recognition might mean for people living with symptoms and unanswered questions.</p>
-<blockquote class="quote">“[Insert a verified quote from Dr Sally Mortlock explaining what SAFE is designed to detect.]”<cite>Dr Sally Mortlock · [Verify title and quote]</cite></blockquote>
+<div class="researcher-feature">
+<figure class="portrait-placeholder"><img src="melinda-heywood.jpg" alt="Portrait photograph supplied for use in the endometriosis research feature"><figcaption>[Confirm the pictured person's name, role, permission and image credit before publication.]</figcaption></figure>
+<div class="researcher-copy"><p class="kicker">Researcher perspective</p><blockquote class="quote">“[Insert a verified quote from Dr Sally Mortlock explaining what SAFE is designed to detect.]”<cite>Dr Sally Mortlock · [Verify title and quote]</cite></blockquote><p class="source-caption">The portrait beside this section is a separate image placeholder. Confirm that the person pictured is the source quoted before connecting them editorially.</p></div>
+</div>
 <p>[Explain what the research team says needs to happen next, including funding, validation, implementation or further study where confirmed. Do not imply the tool is widely available unless your reporting verifies this.]</p>
 </section>
 <section class="band" id="psychology"><div class="band-inner">
-<div class="reveal"><div class="kicker">02 / The psychological impact</div><h2>The symptoms are not only physical.</h2><p>While endometriosis coverage often focuses on pain and diagnostic delays, recent Australian research offers another lens: the psychological strain reported by people who suspect endometriosis but have not received a formal diagnosis.</p><p>[Introduce the study: authors, publication date, sample and method. Explain whether participants were diagnosed or suspected of having endometriosis, and avoid suggesting the findings apply to everyone.]</p></div>
+<div class="reveal"><div class="kicker">02 / The psychological impact</div><h2>The symptoms are not only physical.</h2><p>While endometriosis coverage often focuses on pain and diagnostic delays, recent Australian research offers another lens: the psychological strain reported by people who suspect endometriosis but have not received a formal diagnosis.</p><p>[Introduce the study: authors, publication date, sample and method. Explain whether participants were diagnosed or suspected of having endometriosis, and avoid suggesting the findings apply to everyone.]</p></div><figure class="story-image pain-image"><img src="images.jpeg" alt="A woman lying on a bed holding a hot-water bottle against her abdomen"><figcaption>Illustrative image of someone managing period or pelvic pain. <span>[Confirm image source, licensing and credit; this is not a photo of an interviewee unless confirmed.]</span></figcaption></figure>
 <div class="reveal"><p class="intro">Reported symptoms before diagnosis</p><p>In a 2011–2021 open cohort of 19,786 women aged 14–49 with a GP-documented diagnosis, the study recorded a range of symptoms before diagnosis.</p>
 <div class="chart-wrap" id="symptom-chart" aria-label="Vertical bar chart of symptoms documented before a GP endometriosis diagnosis, plus a separate display of other conditions recorded in the same cohort">
 <h3 class="chart-heading">Symptoms documented before diagnosis</h3>
