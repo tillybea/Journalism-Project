@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive long-form journalism feature exploring the uncertainty experienced by Queensland women seeking an endometriosis diagnosis.">
+  <title>The Wait for Answers | A long-form feature</title>
+  <style>
+    :root{--ink:#262321;--muted:#6d6560;--paper:#faf7f2;--rose:#c56e68;--rose-dark:#8e4947;--blush:#f0dfd8;--sage:#dce3d8;--line:#ded5cc;--white:#fffdf9;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7}
+    a{color:var(--rose-dark)}button{font:inherit}.progress{height:4px;position:fixed;top:0;left:0;width:0;background:var(--rose);z-index:20}
+    .topbar{position:sticky;top:4px;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(18px,5vw,70px);background:rgba(250,247,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);gap:20px}
+    .brand{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.topbar nav{display:flex;gap:18px;flex-wrap:wrap}.topbar nav a{text-decoration:none;color:var(--ink);font-size:.76rem}
+    .hero{min-height:86vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:7vh clamp(22px,9vw,140px);gap:5vw;background:linear-gradient(115deg,var(--paper) 0 56%,var(--blush) 56% 100%);overflow:hidden}
+    .eyebrow,.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--rose-dark)}
+    h1,h2,h3,p{margin-top:0}h1{font:clamp(3.7rem,8vw,8rem)/.92 var(--serif);letter-spacing:-.065em;margin:24px 0}h1 em{font-weight:400;color:var(--rose-dark)}.dek{font:clamp(1.15rem,2vw,1.45rem)/1.55 var(--serif);max-width:590px}.byline{font-size:.8rem;color:var(--muted);margin-top:28px}
+    .hero-art{min-height:430px;position:relative;display:grid;place-items:center}.orb{width:min(32vw,380px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f9e9df 0 15%,#d89b91 16% 40%,#ad625d 41% 65%,#783d40 66%);box-shadow:25px 35px 0 rgba(120,61,64,.09);position:relative}.orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(255,253,249,.7);border-radius:50%;inset:12%;transform:rotate(-28deg) scaleX(.62)}.orb:after{inset:-10%;transform:rotate(38deg) scaleX(.52);border-color:rgba(142,73,71,.5)}
+    .art-note{position:absolute;bottom:4%;right:0;max-width:190px;font:italic 1rem/1.4 var(--serif);color:var(--rose-dark)}
+    .scroll-cue{position:absolute;bottom:22px;left:clamp(22px,9vw,140px);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+    main{overflow:hidden}.section{padding:100px 24px;max-width:1080px;margin:auto}.section.narrow{max-width:740px}.section h2{font:clamp(2.5rem,5vw,4.8rem)/1.03 var(--serif);letter-spacing:-.045em;margin:14px 0 28px}.section p{font-size:1.05rem}.dropcap:first-letter{font:4.5rem/.8 var(--serif);float:left;padding:.12em .12em 0 0;color:var(--rose-dark)}
+    .pullquote{margin:44px 0;padding:25px 0 25px 28px;border-left:3px solid var(--rose);font:clamp(1.6rem,3vw,2.4rem)/1.3 var(--serif);color:var(--rose-dark)}.pullquote cite{display:block;font:normal .75rem/1.5 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:18px}
+    .band{background:var(--sage);padding:80px 24px}.band-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:.75fr 1.25fr;gap:7vw;align-items:start}.band h2{font:clamp(2.3rem,4vw,4rem)/1.05 var(--serif);letter-spacing:-.04em}.timeline{border-top:1px solid rgba(38,35,33,.25)}.time-item{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(38,35,33,.25)}.time-item strong{color:var(--rose-dark);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.time-item p{margin:0}
+    .stat-panel{background:var(--ink);color:var(--paper);padding:70px 24px}.stat-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.stat-inner h2{font:clamp(2.4rem,4.5vw,4.3rem)/1.05 var(--serif);letter-spacing:-.04em}.stat-placeholder{border:1px solid #706660;padding:28px}.stat-placeholder .number{font:clamp(3.5rem,8vw,6.5rem)/1 var(--serif);color:#e3aaa0}.stat-placeholder p{font-size:.82rem;color:#d4c9c0;margin:16px 0 0}
+    .accordion{border-top:1px solid var(--line);margin-top:36px}.acc-item{border-bottom:1px solid var(--line)}.acc-button{display:flex;width:100%;justify-content:space-between;gap:20px;text-align:left;border:0;background:none;padding:22px 0;font:1.25rem var(--serif);color:var(--ink);cursor:pointer}.acc-button span:last-child{font:1.4rem var(--sans);color:var(--rose-dark)}.acc-content{padding:0 35px 22px 0;color:var(--muted)}.acc-content[hidden]{display:none}
+    .tool-panel{background:var(--blush);padding:80px 24px}.tool-inner{max-width:1080px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:7vw}.tool-inner h2{font:clamp(2.5rem,5vw,4.5rem)/1.03 var(--serif);letter-spacing:-.045em}.steps{counter-reset:step}.step{position:relative;padding:0 0 26px 48px;margin-bottom:22px;border-bottom:1px solid rgba(38,35,33,.2)}.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:30px;height:30px;border:1px solid var(--rose-dark);border-radius:50%;display:grid;place-items:center;color:var(--rose-dark);font: .8rem var(--sans)}.step h3{font:1.25rem var(--serif);margin-bottom:7px}.step p{margin:0;font-size:.95rem}
+    .closing{padding:100px 24px;text-align:center;background:var(--paper)}.closing-inner{max-width:760px;margin:auto}.closing h2{font:clamp(2.8rem,6vw,5.5rem)/1 var(--serif);letter-spacing:-.05em}.closing p{max-width:620px;margin:20px auto}.sources{background:#f0ebe4;padding:55px 24px}.sources-inner{max-width:900px;margin:auto}.sources h2{font:2rem var(--serif)}.source-note{font-size:.9rem;color:var(--muted)}.source-list{font-size:.9rem;padding-left:20px}
+    footer{padding:24px clamp(20px,5vw,70px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);border-top:1px solid var(--line)}
+    .editor-note{background:#fff3cd;color:#5d4b20;padding:14px 18px;border-radius:4px;font-size:.85rem;margin:20px 0}.editor-note strong{display:block}
+    @media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column;padding:12px 18px}.topbar nav{gap:12px}.hero{grid-template-columns:1fr;min-height:auto;padding-top:70px;padding-bottom:85px;background:linear-gradient(160deg,var(--paper) 0 63%,var(--blush) 63%)}.hero-art{min-height:270px}.orb{width:210px}.art-note{right:3%;bottom:0}.scroll-cue{bottom:18px}.section{padding:70px 24px}.band-inner,.stat-inner,.tool-inner{grid-template-columns:1fr;gap:28px}.time-item{grid-template-columns:90px 1fr}.stat-panel,.tool-panel{padding:60px 24px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" style="text-decoration:none;color:inherit">A long-form feature</a>
+    <nav aria-label="Main navigation">
+      <a href="#experience">The experience</a><a href="#uncertainty">The uncertainty</a><a href="#research">The research</a><a href="#safe">SAFE explained</a>
+    </nav>
+  </header>
+  <section class="hero" id="top">
+    <div>
+      <div class="eyebrow">Endometriosis · Queensland, Australia</div>
+      <h1>The Wait<br>for <em>Answers</em></h1>
+      <p class="dek">For women living with symptoms but no clear diagnosis, uncertainty can become part of everyday life. What changes when someone finally has an explanation?</p>
+      <p class="byline">A reported long-form feature · By [Your name] · [Publication / course]</p>
+      <div class="editor-note"><strong>Working draft</strong>This is a website scaffold. Replace bracketed prompts with verified reporting, approved interview quotes and properly attributed research before publication.</div>
+    </div>
+    <div class="hero-art" role="img" aria-label="Abstract illustration of overlapping circles, representing the uncertainty of searching for answers">
+      <div class="orb"></div><div class="art-note">Living with questions that have no easy answer.</div>
+    </div>
+    <div class="scroll-cue">↓ Scroll to explore the story</div>
+  </section>
+  <main>
+    <section class="section narrow" id="experience">
+      <div class="kicker">01 / Lived experience</div>
+      <h2>When symptoms don't come with answers</h2>
+      <p class="dropcap">Pain can be real long before there is a name for it. For people seeking an endometriosis diagnosis, appointments, tests and unanswered questions may become an exhausting routine — while study, work, relationships and ordinary plans continue around them.</p>
+      <p>[Open with a carefully reported scene from one interviewee's experience. Use concrete details the source has agreed can be published, and avoid inventing thoughts, dialogue or setting.]</p>
+      <blockquote class="pullquote">“[Insert a verified, exact quote that captures what it felt like to seek answers.]”<cite>[Interviewee name or agreed identifier]</cite></blockquote>
+      <p>[Explain what happened next in the person's diagnostic journey. Make clear what is their experience, rather than implying every person experiences the same process.]</p>
+    </section>
+    <section class="band" id="uncertainty">
+      <div class="band-inner">
+        <div><div class="kicker">02 / The journey</div><h2>There is no single path to a diagnosis.</h2><p>Tap each stage to explore the practical and emotional questions that can arise during a diagnostic journey.</p></div>
+        <div class="timeline">
+          <div class="time-item"><strong>First symptoms</strong><p>Pain or other symptoms begin to affect everyday life. <em>[Add source-specific detail.]</em></p></div>
+          <div class="time-item"><strong>Seeking help</strong><p>Appointments may bring new questions, possible explanations or referrals. <em>[Verify against interviews and research.]</em></p></div>
+          <div class="time-item"><strong>Living in limbo</strong><p>Without a clear explanation, people may have to decide how to manage symptoms and explain their needs to others. <em>[Add a verified example.]</em></p></div>
+          <div class="time-item"><strong>Finding answers</strong><p>A diagnosis may offer a framework for understanding symptoms and discussing care, although experiences differ. <em>[Use interview evidence here.]</em></p></div>
+        </div>
+      </div>
+    </section>
+    <section class="stat-panel" id="research">
+      <div class="stat-inner">
+        <div><div class="kicker" style="color:#e3aaa0">03 / What research says</div><h2>The impact is more than physical.</h2><p>Research into diagnostic uncertainty can help explain what is at stake while someone is waiting for answers. This section should connect the recent Australian psychological study to the experiences described by your sources.</p><p>[Summarise the study's research question, sample, methods and key findings in your own words. Distinguish association from causation and include the publication date.]</p></div>
+        <div class="stat-placeholder"><div class="number">Research</div><p>Replace this panel with one carefully sourced statistic or a short finding from the Australian study. Include the source, date, population and context. Do not publish an unverified number.</p></div>
+      </div>
+    </section>
+    <section class="section narrow">
+      <div class="kicker">04 / What a diagnosis can mean</div>
+      <h2>An explanation is not a cure-all.</h2>
+      <p>A diagnosis does not erase symptoms or guarantee a straightforward treatment journey. But for some people, naming a condition may help make sense of what they have experienced, communicate their needs and make decisions about care.</p>
+      <p>[Use interview evidence to explore what changed — or did not change — after diagnosis. Include a contrasting experience if your reporting supports it.]</p>
+      <div class="accordion" aria-label="Interviewee perspectives">
+        <div class="acc-item"><button class="acc-button" aria-expanded="false" aria-controls="story-a"><span>One person's turning point</span><span aria-hidden="true">+</span></button><div class="acc-content" id="story-a" hidden><p>[Insert a short, verified account of what changed for an interviewee after receiving a diagnosis, including a direct quote with permission.]</p></div></div>
+        <div class="acc-item"><button class="acc-button" aria-expanded="false" aria-controls="story-b"><span>When answers are still incomplete</span><span aria-hidden="true">+</span></button><div class="acc-content" id="story-b" hidden><p>[Insert a contrasting account that reflects the source's own words and avoids generalising beyond their experience.]</p></div></div>
+        <div class="acc-item"><button class="acc-button" aria-expanded="false" aria-controls="story-c"><span>What support looked like</span><span aria-hidden="true">+</span></button><div class="acc-content" id="story-c" hidden><p>[Describe a specific support, accommodation or conversation that made a difference, if supported by reporting.]</p></div></div>
+      </div>
+    </section>
+    <section class="tool-panel" id="safe">
+      <div class="tool-inner">
+        <div><div class="kicker">05 / Research in focus</div><h2>Could a screening tool help identify risk earlier?</h2><p>Researchers at The University of Queensland have been developing SAFE, a screening approach intended to help identify people who may be at risk of endometriosis. Its role, evidence and limits need to be explained precisely: screening is not the same as confirming a diagnosis.</p><p>[Insert the researcher's verified explanation of how SAFE works, what evidence supports it, its current stage of development or implementation, and what it cannot tell a patient.]</p></div>
+        <div class="steps">
+          <div class="step"><h3>Recognise patterns</h3><p>[Explain which symptoms or information the tool considers, using an authoritative source.]</p></div>
+          <div class="step"><h3>Support a conversation</h3><p>[Explain how a screening result may inform discussion with a health professional, without overstating what it proves.]</p></div>
+          <div class="step"><h3>Understand the limits</h3><p>A screening result is not, by itself, a diagnosis. Confirm the next steps and limitations with the research team or a qualified clinician.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="closing">
+      <div class="closing-inner"><div class="kicker">The question that remains</div><h2>What does it cost to wait?</h2><p>The answer is different for everyone. The stories and research gathered here point to why diagnostic pathways matter not only for physical health, but also for the uncertainty people carry while they seek an explanation.</p><p>[Return to the opening interviewee or scene. End with a verified detail or quote that adds meaning, rather than promising that a new tool will solve every delay.]</p></div>
+    </section>
+  </main>
+  <section class="sources" id="sources"><div class="sources-inner"><h2>Sources and methodology</h2><p class="source-note">Add a transparent source list before publication. Link to original studies and official research material where possible, and identify interviews by name and role where consent allows.</p><ul class="source-list"><li>[Full citation and link for the Australian psychological study]</li><li>[Official UQ / SAFE research source and date accessed]</li><li>[Interview: researcher name, role, interview date]</li><li>[Interview: clinician name, role, interview date]</li><li>[Lived-experience interviews, with publication permissions noted in your records]</li></ul><p class="source-note"><strong>Editorial note:</strong> This is a student journalism project. All claims, quotations, dates, figures and descriptions should be checked against original sources before publication.</p></div></section>
+  <footer><span>THE WAIT FOR ANSWERS · LONG-FORM JOURNALISM</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    const progress = document.getElementById('progress');
+    function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?(window.scrollY/max)*100:0)+'%'}
+    window.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+    document.querySelectorAll('.acc-button').forEach(button=>{button.addEventListener('click',()=>{const panel=document.getElementById(button.getAttribute('aria-controls'));const expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!expanded));panel.hidden=expanded;button.querySelector('span:last-child').textContent=expanded?'+':'−';});});
+  </script>
+</body>
+</html>
