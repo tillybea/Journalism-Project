@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A reported interactive feature on UQ's SAFE endometriosis screening research and the psychological uncertainty of waiting for a diagnosis.">
 <title>Before the Answer | Endometriosis, uncertainty and SAFE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+
 <style>
-:root{--navy:#18364a;--blue:#376f8a;--sky:#e2eef1;--pale:#f7f5f0;--teal:#277e75;--pink:#d86e8b;--pink-pale:#fff0f4;--ink:#243640;--muted:#65757c;--line:#d9e1df;--white:#fff;--serif:Georgia,'Times New Roman',serif;--sans:Inter,'Aptos',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+:root{--navy:#18364a;--blue:#376f8a;--sky:#e2eef1;--pale:#f7f5f0;--teal:#277e75;--pink:#d86e8b;--pink-pale:#fff0f4;--ink:#243640;--muted:#65757c;--line:#d9e1df;--white:#fff;--serif:"Source Serif 4",Georgia,"Times New Roman",serif;--sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;color:var(--ink);background:var(--white);font:16px/1.72 var(--sans)}a{color:var(--blue)}button{font:inherit}.progress{position:fixed;z-index:50;top:0;left:0;height:4px;width:0;background:var(--teal)}
 .topbar{position:sticky;top:4px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,5vw,72px);background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.brand{font-size:.73rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);text-decoration:none;white-space:nowrap}.topbar nav{display:flex;gap:20px;flex-wrap:wrap}.topbar nav a{font-size:.77rem;text-decoration:none;color:var(--ink)}
 .hero{display:grid;grid-template-columns:1.08fr .92fr;min-height:84vh;align-items:center;gap:5vw;padding:8vh clamp(22px,9vw,140px);background:linear-gradient(120deg,#fff 0 58%,var(--pale) 58% 100%);position:relative}.eyebrow,.kicker{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}h1,h2,h3,p{margin-top:0}h1{font:clamp(3.6rem,8vw,7.8rem)/.91 var(--serif);letter-spacing:-.065em;color:var(--navy);margin:22px 0}h1 em{font-weight:400;color:var(--blue)}.dek{max-width:650px;font:clamp(1.15rem,2vw,1.45rem)/1.55 var(--serif);color:#304d63}.byline{margin-top:26px;font-size:.8rem;color:var(--muted)}.hero-art{min-height:390px;position:relative;display:grid;place-items:center}.ring{width:min(32vw,350px);aspect-ratio:1;border:1px solid #8bb4cf;border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle,#fff 0 22%,#e5f1f8 23% 48%,#c8e0ef 49% 67%,#a5cbe0 68%);box-shadow:0 24px 60px #102b4615}.ring:before,.ring:after{content:"";position:absolute;border:1px solid #5488a9;border-radius:50%;inset:-9%;transform:scaleX(.65) rotate(35deg)}.ring:after{inset:-18%;transform:scaleX(.46) rotate(-30deg);border-color:#187f8377}.ring-label{font:1rem var(--serif);text-align:center;max-width:145px;color:var(--navy);z-index:1}.art-note{position:absolute;bottom:2%;right:0;max-width:185px;font:italic 1rem/1.4 var(--serif);color:var(--blue)}.scroll-cue{position:absolute;bottom:20px;left:clamp(22px,9vw,140px);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -103,6 +107,122 @@
  .hero-photo img{height:270px}
 }
 
+
+/* Final editorial system: cinematic typography, corrected flow, and full-screen dot scene */
+:root{
+  --navy:#132b38;--blue:#2f6c7b;--sky:#dce9e8;--pale:#f2f0e9;
+  --teal:#3e9b8d;--pink:#e7829b;--pink-pale:#fff0f3;
+  --ink:#1b2a32;--muted:#68777c;--line:#d1d9d7;--white:#fff;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+body{font-family:var(--sans);font-size:16px;line-height:1.75;color:#22323b}
+h1,h2,h3,.quote,.timeline-node .node-title,.timeline-detail-card h3,.acc-button,.safe-card p{font-family:var(--serif)}
+h1{font-weight:500;letter-spacing:-.045em;line-height:.93}
+.section h2,.band h2,.panel h2,.closing h2{font-weight:500;letter-spacing:-.035em}
+p{max-width:72ch}
+.topbar{background:rgba(249,248,244,.97);border-color:#d8deda}
+.topbar nav a{font-weight:500}
+.hero{background:linear-gradient(125deg,#102733 0%,#173745 59%,#254958 100%);color:#f8f5ef}
+.hero .eyebrow,.hero .kicker{color:#f29bb0}
+.hero h1{color:#fffaf4}
+.hero h1 em{color:#f29bb0}
+.hero .dek{color:#e4eceb}
+.hero .byline{color:#b6c7ca}
+.hero .art-note{color:#f5b3c1}
+.hero .ring{border-color:#f1a2b7;background:radial-gradient(circle,#fdf6f1 0 22%,#f0cbd5 23% 48%,#b77f91 49% 67%,#6b5268 68%);box-shadow:0 24px 60px #0004}
+.hero .ring:before,.hero .ring:after{border-color:#f0a1b6}
+.hero .ring-label{color:#162d39}
+.hero .editor-note{background:#fff1df;border-left-color:#e7a65c;color:#654c32}
+.hero .scroll-cue{color:#cedbdd}
+.band-inner>.reveal:first-child,.band-inner>.story-image{position:static!important;top:auto!important;align-self:start}
+.band-inner{align-items:start}
+.reveal{will-change:opacity,transform}
+.panel{background:#142c39;color:#f8f5ef}
+.panel .kicker{color:#f29bb0}
+.panel p{color:#d5e1e1}
+.closing{background:#142c39;color:#f4f0e8}
+.closing h2{color:#fffaf4}
+.closing p{color:#d5e1e1}
+.closing .kicker{color:#f29bb0}
+.sources{background:#0f202a;color:#d8e2e1}
+.sources h2{color:#fffaf4}
+.sources .source-note,.sources .source-list{color:#cad7d8}
+.sources a{color:#f29bb0}
+footer{background:#0b1a22;color:#c2ced0;border-color:#293e47}
+footer a{color:#f29bb0}
+.progress{background:#ee8da5}
+
+/* Full-viewport, layered population visual. The field is decorative; the stat remains in live text. */
+.dot-section{
+  position:relative;isolation:isolate;min-height:100svh;overflow:hidden;
+  padding:0;background:#0b1b25;color:#f8f4ed;
+  display:flex;align-items:stretch;
+}
+.dot-section::before{
+  content:"";position:absolute;z-index:1;inset:0;pointer-events:none;
+  background:linear-gradient(90deg,rgba(8,22,31,.97) 0%,rgba(8,22,31,.88) 35%,rgba(8,22,31,.57) 68%,rgba(8,22,31,.32) 100%),
+             linear-gradient(0deg,rgba(8,22,31,.62),transparent 30%,transparent 75%,rgba(8,22,31,.25));
+}
+.dot-section .dot-field{
+  position:absolute;z-index:0;inset:0;width:100%;height:100%;max-width:none;
+  margin:0;padding:clamp(18px,3vw,52px);border:0;border-radius:0;
+  display:grid;grid-template-columns:repeat(39,minmax(0,1fr));grid-template-rows:repeat(25,minmax(0,1fr));
+  gap:clamp(5px,.9vw,15px);background:transparent;opacity:.92;
+}
+.dot-section .person-mark{
+  display:block;width:clamp(5px,.75vw,11px);height:clamp(5px,.75vw,11px);
+  min-width:0;aspect-ratio:1;place-self:center;border-radius:50%;
+  background:#d86d88;opacity:.76;transition:opacity .2s,transform .2s;
+}
+.dot-section .person-mark:nth-child(7n+1){background:#f0a1b5;opacity:.98}
+.dot-section .person-mark:nth-child(11n+4){background:#a84f69;opacity:.8}
+.dot-section .person-mark:hover{opacity:1;transform:scale(1.45)}
+.dot-story{
+  position:relative;z-index:2;width:100%;min-height:100svh;max-width:1400px;margin:0 auto;
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+  padding:clamp(40px,8vh,100px) clamp(26px,9vw,140px);
+}
+.dot-copy{max-width:690px}
+.dot-section .kicker{color:#f3a2b6;margin-bottom:20px}
+.dot-stat{font:500 clamp(5.5rem,15vw,12.5rem)/.78 var(--serif);letter-spacing:-.075em;color:#fff6f0;margin:0 0 23px;max-width:none;font-variant-numeric:tabular-nums}
+.dot-population{font-size:clamp(.88rem,1.4vw,1.08rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#f3a2b6;margin:0 0 25px}
+.dot-section h2{max-width:620px;font:500 clamp(2.3rem,5.5vw,5rem)/.99 var(--serif);letter-spacing:-.04em;color:#fff6f0;margin:0 0 22px}
+.dot-lead{max-width:600px;font:clamp(1.1rem,2vw,1.45rem)/1.55 var(--serif);color:#e0e8e7;margin-bottom:15px}
+.dot-explainer{max-width:560px;color:#d0dcdd;font-size:.98rem;margin-bottom:13px}
+.dot-source{max-width:580px;color:#aebfc2;font-size:.75rem;line-height:1.55;margin:22px 0 8px}
+.dot-link{margin:0;font-size:.82rem}
+.dot-link a{color:#f3a2b6;text-decoration-thickness:1px;text-underline-offset:4px}
+.dot-key{position:absolute;right:clamp(24px,5vw,72px);bottom:clamp(46px,8vh,94px);z-index:3;display:flex;align-items:center;gap:13px;padding:15px 18px;border:1px solid #c67b8e66;background:rgba(9,24,33,.76);backdrop-filter:blur(8px);color:#f4f0e8;font-size:.83rem;line-height:1.4}
+.dot-key strong{font-size:.95rem;color:#f3a2b6}
+.dot-key-mark{display:block;width:10px;height:10px;flex:0 0 10px;background:#e7829b;border-radius:50%;box-shadow:0 0 0 5px #e7829b22}
+.dot-scroll-cue{position:absolute;left:clamp(26px,9vw,140px);bottom:22px;margin:0;color:#aebfc2;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.dot-scroll-cue span{display:inline-block;margin-left:8px;color:#f3a2b6;font-size:1rem}
+@media(max-width:760px){
+  .hero{background:linear-gradient(155deg,#102733,#1e4352)}
+  .dot-section,.dot-story{min-height:100svh}
+  .dot-section .dot-field{grid-template-columns:repeat(25,minmax(0,1fr));grid-template-rows:repeat(39,minmax(0,1fr));padding:12px;gap:5px}
+  .dot-section .person-mark{width:clamp(4px,1.25vw,7px);height:clamp(4px,1.25vw,7px)}
+  .dot-section::before{background:linear-gradient(90deg,rgba(8,22,31,.91),rgba(8,22,31,.71)),linear-gradient(0deg,rgba(8,22,31,.8),transparent 45%)}
+  .dot-story{justify-content:center;padding:72px 25px 120px}
+  .dot-copy{max-width:100%}
+  .dot-stat{font-size:clamp(5.3rem,23vw,8.2rem);margin-bottom:20px}
+  .dot-section h2{font-size:clamp(2.4rem,9.5vw,4rem)}
+  .dot-lead{font-size:1.12rem}
+  .dot-source{font-size:.7rem}
+  .dot-key{left:25px;right:auto;bottom:43px;padding:11px 13px}
+  .dot-scroll-cue{display:none}
+  .band-inner>.reveal:first-child,.band-inner>.story-image{position:static!important;top:auto!important}
+}
+@media(max-width:390px){
+  .dot-population{font-size:.78rem;letter-spacing:.1em}
+  .dot-section h2{font-size:2.25rem}
+  .dot-key{font-size:.77rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .dot-section .person-mark{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -150,7 +270,23 @@
 <div class="vcol psych-col" data-value="22.5"><span class="vcol-value">22.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Anxiety*</span></div>
 <p class="source-caption">Source: Mazza et al., “The clinical presentation, investigation, and management of women diagnosed with endometriosis in Australian general practices, 2011–2021: an open cohort study”, <a href="https://www.mja.com.au/journal/2025/223/11/clinical-presentation-investigation-and-management-women-diagnosed" target="_blank" rel="noopener">Medical Journal of Australia (2025)</a>, Boxes 2–3. *Depression and anxiety are other conditions recorded in the cohort, not symptoms in the pre-diagnosis symptom list. The measures are shown together for comparison, but should not be interpreted as the same type of measure. These percentages describe recorded data among the cohort with a GP-documented diagnosis, not prevalence among all Queensland women.</p>
 </div></div></div></section>
-<section class="dot-section" id="queensland-dots"><div class="panel-inner"><div class="reveal"><div class="kicker">A Queensland-sized picture</div><div class="big-number">975,700</div><h2>People behind the percentage.</h2><p class="intro">A reported 17% of Queenslanders — about 975,700 people — are represented by this estimate of people living with endometriosis.</p><p>This dot illustration translates that large number into something you can see: each dot represents approximately 1,000 Queenslanders.</p><p class="source-caption">The 17% figure is reported by Endometriosis Australia; the population estimate of 975,700 is based on the ABS figure supplied for this project. Check the underlying population, date and calculation before publication.</p><p><a href="https://endometriosisaustralia.org/endometriosis-australia-welcomes-queensland-health-funding/" target="_blank" rel="noopener">Endometriosis Australia source</a></p></div><div class="reveal"><div class="people-grid" id="people-grid" role="img" aria-label="A grid of 975 pink dots. Each dot represents approximately 1,000 Queenslanders, illustrating an estimate of 975,700 people living with endometriosis."></div><p class="dot-caption"><strong>1 dot ≈ 1,000 Queenslanders</strong> represented in the estimate of people living with endometriosis.</p><p class="dot-caption">975 dots represent approximately 975,000 people. The visual is rounded to the nearest thousand, rather than showing 700 of the final thousand as a fraction of a dot.</p></div></div></section>
+<section class="dot-section" id="queensland-dots" aria-labelledby="queensland-dot-title">
+  <div class="people-grid dot-field" id="people-grid" role="img" aria-label="A field of 975 pink dots. Each dot represents approximately 1,000 Queenslanders, illustrating an estimate of 975,700 people living with endometriosis."></div>
+  <div class="dot-story">
+    <div class="dot-copy">
+      <p class="kicker">A Queensland-sized picture</p>
+      <p class="dot-stat">17%</p>
+      <p class="dot-population">≈ 975,700 Queenslanders</p>
+      <h2 id="queensland-dot-title">A number too big to picture.</h2>
+      <p class="dot-lead">This estimate represents the scale of endometriosis in Queensland — thousands of individual lives behind a percentage.</p>
+      <p class="dot-explainer">Each dot on this screen represents approximately 1,000 Queenslanders. Together, the 975 dots illustrate around 975,000 people.</p>
+      <p class="dot-source">The 17% figure is reported by Endometriosis Australia; the estimate of 975,700 is based on the ABS population figure supplied for this project. Confirm the source date, population denominator and calculation before publication.</p>
+      <p class="dot-link"><a href="https://endometriosisaustralia.org/endometriosis-australia-welcomes-queensland-health-funding/" target="_blank" rel="noopener">Read the Endometriosis Australia source ↗</a></p>
+    </div>
+    <div class="dot-key"><span class="dot-key-mark" aria-hidden="true"></span><span><strong>1 dot</strong><br>≈ 1,000 Queenslanders</span></div>
+    <p class="dot-scroll-cue" aria-hidden="true">Scroll to continue <span>↓</span></p>
+  </div>
+</section>
 <section class="section" id="journey"><div class="kicker">03 / The diagnostic journey</div><h2>Years can pass between symptoms and answers.</h2><p class="intro">A diagnostic journey rarely follows a neat, predictable line. Select each stage to explore how it can feel — using the experiences of the people you interviewed.</p>
 <div class="editor-note"><strong>What the Australian study found</strong>“A name to the pain” reported an average diagnostic delay of 12.3 years among 506 survey participants with self-reported endometriosis. This is a result from that sample, not a universal timeline or a Queensland-specific estimate.</div>
 <div class="big-number" style="color:var(--blue)">12.3 <small style="font:1rem var(--sans)">years · reported average in the Australian study</small></div>
