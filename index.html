@@ -498,19 +498,143 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 @media(prefers-reduced-motion:reduce){
   .pathway-track{transition:none}
 }
+
+/* Final palette: dark blue, light blue and white only */
+:root{
+  --navy:#12334b;
+  --blue:#3f78a0;
+  --sky:#dcecf6;
+  --pale:#f2f8fc;
+  --teal:#4e87ad;
+  --pink:#bed9eb;
+  --pink-pale:#edf5fa;
+  --ink:#16364d;
+  --muted:#587184;
+  --line:#cbdfea;
+  --white:#ffffff;
+}
+body{background:#fff;color:#16364d}
+a{color:#2f6892}
+.progress{background:#79afd0}
+.topbar{background:#fff;border-color:#cbdfea}
+.brand,.topbar nav a{color:#12334b}
+.hero{
+  grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);
+  background:linear-gradient(125deg,#12334b 0%,#174766 60%,#356f96 100%);
+  color:#fff;
+  padding:clamp(48px,7vh,84px) clamp(22px,7vw,105px);
+}
+.hero-copy{min-width:0;max-width:850px}
+.hero h1{
+  max-width:850px;
+  margin:0 0 24px;
+  font-size:clamp(2.35rem,3.6vw,4rem);
+  line-height:1.06;
+  letter-spacing:-.035em;
+  font-weight:500;
+  color:#fff;
+  text-wrap:balance;
+}
+.hero .dek{max-width:690px;color:#e1f0f8;font-size:clamp(1.08rem,1.5vw,1.3rem)}
+.hero .byline{margin-top:23px;color:#d2e7f2;font-size:.86rem}
+.hero-art{min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:0}
+.hero-photo img{width:100%;height:clamp(300px,41vw,500px);object-fit:cover;border-radius:2px;box-shadow:none}
+.hero-photo figcaption{margin-top:9px;color:#d8eaf3;font-size:.78rem;font-style:normal}
+.section h2,.band h2,.panel h2,.closing h2,.safe-box h3{color:#12334b}
+.quote{border-left-color:#70a8cc;color:#316b92}
+.quote cite{color:#587184}
+.band{background:#edf5fa}
+.band p{color:#34566d}
+.panel,.closing{background:#12334b;color:#fff}
+.panel h2,.closing h2{color:#fff}
+.panel .kicker,.closing .kicker{color:#c9e3f2}
+.panel p,.closing p{color:#e1edf4}
+.sources{background:#0d283a;color:#e4eff5}
+.sources h2{color:#fff}
+.sources .source-note,.sources .source-list{color:#d4e4ee}
+.sources a,footer a{color:#c8e3f2}
+footer{background:#0b2231;color:#e0eaf0;border-color:#315166}
+.chart-heading{color:#12334b}
+.vbar{background:linear-gradient(180deg,#9dcbe7,#3f78a0)}
+.legend-swatch{background:#3f78a0}
+.legend-swatch.psych{background:#85b9d9}
+.psych-panel .chart-heading{color:#2f6892}
+.psych-col .vcol-value{color:#2f6892}
+.psych-col .vbar{background:linear-gradient(180deg,#b7d8ec,#5f9bc4)}
+.psych-col .vbar-track{background-color:#eef6fb}
+.dot-section{
+  background:#12334b!important;
+  color:#fff!important;
+}
+.dot-section::before{background:rgba(10,35,52,.18)!important}
+.dot-section .person-mark,
+.dot-section .person-mark:nth-child(7n+1),
+.dot-section .person-mark:nth-child(11n+4),
+.dot-section .person-mark:nth-child(5n+2),
+.dot-section .person-mark:nth-child(9n+4){
+  background:#dcecf6!important;
+  opacity:1!important;
+  box-shadow:0 0 0 1px rgba(220,236,246,.16),0 0 10px rgba(220,236,246,.15);
+}
+.dot-section .person-mark:nth-child(3n+1){background:#8ebdda!important}
+.dot-copy{background:rgba(15,45,66,.94);border-color:#94bed9;box-shadow:none}
+.dot-section h2{color:#fff;font-family:var(--sans);font-weight:500;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.48;letter-spacing:0}
+.dot-section .dot-lead{color:#d9ebf6;font-family:var(--sans);font-size:clamp(1.15rem,1.8vw,1.5rem);line-height:1.45}
+.dot-section .dot-lead strong{font-weight:800;color:#fff}
+.dot-section .kicker{color:#d9ebf6}
+.timeline-node:after{background:#cbdfea}
+.node-dot{border-color:#7fb0d0;color:#2f6892;background:#fff}
+.timeline-node.is-active .node-dot{background:#3f78a0;border-color:#3f78a0}
+.timeline-node.is-active .node-title{color:#2f6892}
+.timeline-detail-card{background:#eff6fa;border-left-color:#4e87ad}
+.timeline-detail-top{color:#2f6892}
+.timeline-quote{color:#316b92;border-left-color:#8ebdda}
+.safe-box{background:#fff;border-color:#cbdfea}
+.safe-card{background:#eff6fa;border-color:#cbdfea}
+.safe-card:hover{border-color:#7aaed0;background:#fff}
+.safe-icon{background:#dcecf6;color:#2f6892}
+.safe-card-number{color:#2f6892}
+.interview-image-grid img{background:#eaf3f8}
+.researcher-feature .portrait-placeholder img{background:#eaf3f8}
+.editorial-opening{max-width:1030px;padding-top:54px;padding-bottom:66px;display:flow-root}
+.editorial-opening p{max-width:70ch}
+.editorial-opening .opening-paragraph{font:clamp(1.35rem,2.1vw,1.65rem)/1.55 var(--serif);color:#204a66}
+.hot-bottle-inline{
+  float:right;
+  width:min(37%,300px);
+  margin:8px 0 22px 30px;
+}
+.hot-bottle-inline img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.hot-bottle-inline figcaption{font:.76rem/1.45 var(--sans);margin-top:9px;color:#587184}
+.hot-bottle-inline figcaption strong{display:block;font-weight:700;color:#12334b}
+.hot-bottle-inline figcaption span{display:block;margin-top:4px;font-style:italic}
+.float-clear{clear:both}
+.dot-scene-scroll{margin-top:0}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:52px;padding-bottom:55px}
+  .hero h1{font-size:clamp(2.25rem,8vw,3.4rem);line-height:1.08}
+  .hero-art{margin-top:22px}
+  .hero-photo img{height:clamp(230px,67vw,390px)}
+  .editorial-opening{padding-top:35px;padding-bottom:45px}
+  .hot-bottle-inline{float:none;width:min(100%,420px);margin:25px auto 25px}
+  .dot-section h2{font-size:1rem}
+  .dot-section .dot-lead{font-size:1.05rem}
+}
+@media(prefers-reduced-motion:reduce){.dot-section .person-mark{transition:none}}
 </style>
 </head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<header class="topbar"><a class="brand" href="#top">The wait for answers</a><nav aria-label="Main navigation"><a href="#lead">The story</a><a href="#evie">Evie</a><a href="#psychology">Psychological research</a><a href="#safe">SAFE score</a><a href="#funding">What next?</a></nav></header>
 <section class="hero" id="top">
-<div class="hero-copy"><div class="eyebrow">Endometriosis · Queensland, Australia</div>
-<h1>The wait for<br><em>answers</em></h1>
-<p class="dek">As Australian research highlights the psychological toll of suspected endometriosis, a new University of Queensland screening tool could help identify people at risk earlier.</p>
-<p class="hero-question">Can a new UQ screening tool ease the uncertainty of suspected endometriosis?</p>
-<p class="byline">A long-form journalism project · By Matilda Hockey</p></div>
-<figure class="hero-art hero-photo"><img src="image015-1.avif" alt="University of Queensland research centre" loading="eager"><figcaption><em>UQ Research Centre</em></figcaption></figure>
-<div class="scroll-cue">↓ Scroll to explore the story</div>
+  <div class="hero-copy">
+    <h1>The wait for answers: can a new UQ screening tool ease the uncertainty of suspected endometriosis?</h1>
+    <p class="dek">As Australian research highlights the psychological toll of suspected endometriosis, a new University of Queensland screening tool could help identify people at risk earlier.</p>
+    <p class="byline">By Matilda Hockey</p>
+  </div>
+  <figure class="hero-art hero-photo">
+    <img src="image015-1.avif" alt="University of Queensland research centre" loading="eager">
+    <figcaption>UQ Research Centre</figcaption>
+  </figure>
 </section>
 
 <main>
@@ -520,39 +644,37 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
     <figcaption><strong>One in six Queensland women are diagnosed with endometriosis by their early to mid-40s.</strong><span>Image: Wikimedia Commons / Vulvani</span></figcaption>
   </figure>
 </section>
-<section class="section narrow reveal" id="lead">
-  <div class="kicker">01 / The human story</div>
-  <h2>The fear of finding nothing</h2>
-  <p class="intro">When Evie Smith prepared for surgery after years of severe period pain, she was frightened the doctors would find nothing.</p>
+<section class="section narrow editorial-opening" id="lead">
+  <p class="opening-paragraph">When Evie Smith prepared for surgery after years of severe period pain, she was frightened the doctors would find nothing.</p>
   <p>For Smith, the possibility of leaving hospital without an explanation meant continuing to question symptoms that had affected her since her first period at 12.</p>
-</section>
 
-<section class="section narrow reveal" id="news-summary">
-  <div class="kicker">Why this story matters</div>
-  <p>Endometriosis affects an estimated one in six Queensland women by their early to mid-40s, while diagnosis can take an average of six to eight years in Australia.</p>
-  <p>For women living with unexplained symptoms, that wait can mean more than managing pain. It can also mean questioning whether their experiences are normal and whether they will be taken seriously.</p>
-  <p>A 2026 Australian study found that women who suspected they had endometriosis reported greater anxiety symptoms than those with a confirmed diagnosis. Meanwhile, University of Queensland (UQ) researchers have developed the SAFE score, a screening tool designed to identify women at increased risk and prompt further investigation.</p>
-  <p>If further testing shows the tool can support decisions in clinical settings, it could help shorten the diagnostic gap. Whether earlier identification would ease psychological distress remains untested.</p>
+  <figure class="hot-bottle-inline">
+    <img src="photo%2014.png" alt="A woman using a hot-water bottle for pain relief" loading="lazy">
+    <figcaption><strong>One in Six Queensland women are diagnosed with endometriosis</strong><span>Wikimedia Commons: Vulvani</span></figcaption>
+  </figure>
+
+  <p>Endometriosis affects an estimated one in six Queensland women by their early 40s, while diagnosis can take an average of six to eight years in Australia.</p>
+  <p>For women living with unexplained symptoms, that wait can mean more than managing pain – it can also mean questioning whether their experiences are normal and whether they will be taken seriously.</p>
+  <p>A 2026 Australian study found that women who suspected they had endometriosis reported greater anxiety symptoms than those with a confirmed diagnosis.</p>
+  <p>Meanwhile, University of Queensland (UQ) researchers have developed the SAFE score, a screening tool designed to identify women at increased risk and prompt further investigation.</p>
+  <p>This tool could be revolutionary in shortening the diagnostic gap, easing the psychological uncertainty of waiting for an answer.</p>
+  <div class="float-clear" aria-hidden="true"></div>
 </section>
 
 <div class="dot-scene-scroll">
 <section class="dot-section" id="queensland-dots" aria-labelledby="queensland-dot-title">
-  <div class="people-grid dot-field" id="people-grid" role="img" aria-label="A field of 442 dots. Each dot represents an estimated 1,000 Queensland women diagnosed with endometriosis by their early to mid-40s."></div>
+  <div class="people-grid dot-field" id="people-grid" role="img" aria-label="442 dots, each representing an estimated 1,000 Queensland women diagnosed with endometriosis by their early to mid-40s."></div>
   <div class="dot-story">
     <div class="dot-copy">
-      <p class="kicker">The scale of diagnosis in Queensland</p>
       <h2 id="queensland-dot-title">1 dot = 1,000 Queensland women estimated to have been diagnosed with endometriosis by their early to mid-40s.</h2>
       <p class="dot-lead"><strong>How many more could be living without answers?</strong></p>
-      <p class="dot-source">The 442,000 figure is an approximate population estimate based on Queensland's reported one-in-six rate, not a direct count of every person living with endometriosis or awaiting diagnosis.</p>
-      <p class="dot-link"><a href="https://statements.qld.gov.au/statements/99812" target="_blank" rel="noopener">Read the Queensland Government source ↗</a></p>
     </div>
-    <p class="dot-scroll-cue" aria-hidden="true">Scroll to continue <span>↓</span></p>
   </div>
 </section>
 </div>
 
 <section class="section evie-section" id="evie">
-  <div class="kicker">02 / Evie's story</div>
+  
   <h2>When the answer finally came</h2>
   <div class="evie-story-layout">
     <div class="evie-story-copy">
@@ -572,7 +694,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 </section>
 
 <section class="section timeline-section" id="journey">
-  <div class="kicker">03 / The diagnostic journey</div>
+  
   <h2>Diagnostic timeline</h2>
   <p class="intro">Every diagnosis looks different. The time between symptoms and answers can vary widely, and a diagnosis is not always reached through the same steps.</p>
   <p class="timeline-stat-copy">The average diagnostic delay in Australia is <strong class="timeline-stat-number">6–8 years</strong>, according to Endometriosis Australia. A study published in the <em>Journal of Psychosomatic Research</em> in June 2025 reported an average delay of <strong class="timeline-stat-number">12.3 years</strong> among 506 Australian participants with endometriosis. These figures come from different sources and samples.</p>
@@ -628,7 +750,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 
 <section class="band" id="lived-experience"><div class="band-inner">
   <div class="reveal">
-    <div class="kicker">04 / When symptoms feel normal</div>
+    
     <h2>When symptoms feel normal</h2>
     <p>For 24-year-old Sophie Johnston, the uncertainty began with an assumption that her symptoms were simply part of having a period.</p>
     <p>She experienced irregular periods and severe cramping from her first period at 16, but did not initially question whether they were unusual.</p>
@@ -647,7 +769,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 
 
 <section class="section narrow reveal" id="charlee">
-  <div class="kicker">05 / Still seeking clarity</div>
+  
   <h2>When is it worth seeking answers?</h2>
   <p>Charlee Webb has experienced irregular periods, heavy bleeding and severe cramps but has not pursued further specialist investigation. She said comparing herself with other women sometimes leads her to minimise her symptoms.</p>
   <blockquote class="quote">“We could have the worst period of our life and go, ‘Oh, well, everyone … it’s like that.’”<cite>Charlee Webb</cite></blockquote>
@@ -657,7 +779,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 
 
 <section class="section" id="diagnosis">
-  <div class="kicker">06 / The value of a diagnosis</div>
+  
   <h2>Sometimes, a name changes the story.</h2>
   <div class="researcher-feature">
     <figure class="portrait-placeholder">
@@ -674,7 +796,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 
 <section class="band" id="psychology"><div class="band-inner">
   <div class="reveal">
-    <div class="kicker">07 / The psychological impact</div>
+    
     <h2>The symptoms are not only physical.</h2>
     <p>A 2026 Australian study in the <em>Journal of Psychosomatic Research</em> examined psychological distress, health-related quality of life and pain among people with diagnosed or suspected endometriosis.</p>
     <p>It surveyed 653 participants: 550 reported a confirmed diagnosis and 103 suspected they had the condition. The suspected group reported significantly greater pelvic pain and anxiety symptoms.</p>
@@ -686,7 +808,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 </div></section>
 
 <section class="section" id="symptoms">
-  <div class="kicker">08 / What the records show</div>
+  
   <h2>Symptoms can be recorded long before diagnosis.</h2>
   <p class="intro">An Australian study of general-practice records looked at symptoms documented before an endometriosis diagnosis among 19,786 women aged 14–49. These records do not capture every symptom experienced or everyone who suspects they have the condition, but they provide a picture of what appeared in participating practices.</p>
   <div class="chart-wrap" id="symptom-chart" aria-label="Vertical bar chart showing symptoms documented before diagnosis and other conditions recorded in an Australian GP cohort">
@@ -711,7 +833,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 </section>
 
 <section class="section" id="safe">
-  <div class="kicker">09 / Inside SAFE</div>
+  
   <h2>Six factors. A possible earlier signal.</h2>
   <p class="intro">The SAFE score was developed from data on more than 9,000 women in the Australian Longitudinal Study on Women's Health. Researchers identified six factors associated with a later endometriosis diagnosis, with the strongest predictive performance for symptoms experienced during adolescence, particularly ages 16–19.</p>
   <blockquote class="quote">“Our goal with the SAFE score was to try and address that lag between the first experience of symptoms and then the actual diagnosis.”<cite>Dr Sally Mortlock · UQ research team</cite></blockquote>
@@ -736,7 +858,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 
 <section class="band" id="funding"><div class="band-inner">
   <div class="reveal">
-    <div class="kicker">10 / From research to real-world care</div>
+    
     <h2>Funding the next step.</h2>
     <p>The SAFE research has been published, but translating the model into a practical tool will require further development and clinical evaluation. Mortlock said the team is seeking funding and working with consumer and clinician groups to determine how the tool should be presented and interpreted.</p>
     <blockquote class="quote">“We're looking for funding to do it.”<cite>Dr Sally Mortlock · UQ research team</cite></blockquote>
@@ -755,7 +877,7 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 </div></section>
 
 <section class="closing" id="circle-back"><div class="closing-inner">
-  <div class="kicker">Circle back</div>
+  
   <h2>Earlier recognition needs more than a research paper.</h2>
   <p>For Smith, diagnosis changed how she understood years of pain. Looking back, she said greater awareness could have helped her recognise earlier that what she was experiencing was not something she simply had to tolerate.</p>
   <blockquote class="quote">“Just because something is common doesn’t mean it’s normal.”<cite>Evie Smith</cite></blockquote>
@@ -773,7 +895,6 @@ footer{background:#091b27;color:#c8d5d9;border-color:#2a414f}
 <li>Endometriosis Australia (2023). “Endometriosis Australia Welcomes Queensland Health Funding.” <a href="https://endometriosisaustralia.org/endometriosis-australia-welcomes-queensland-health-funding/" target="_blank" rel="noopener">Read the source</a>.</li>
 <li>Interviews: Evie Smith, Dr Melinda Heywood and Dr Sally Mortlock, plus Charlee Webb. Direct quotations should be checked against the interview transcripts and publication permissions confirmed.</li>
 </ul><p class="source-note"><strong>Method note:</strong> The psychological study was a cross-sectional online survey of 550 people reporting a confirmed diagnosis and 103 who suspected they had endometriosis, recruited through Australian endometriosis organisations. Its findings show an association between diagnostic status and reported symptoms; they do not establish causation. The SAFE score is a risk-prediction model, not a diagnostic test, and the research team has described further development as necessary before routine GP use.</p><p class="source-note"><strong>Production note:</strong> Confirm the image locations, rights and credits, and check all direct quotations against the interview transcripts before publication.</p></div></section>
-<footer><span>THE WAIT FOR ANSWERS · LONG-FORM JOURNALISM</span><a href="#top">Back to top ↑</a></footer>
 <script>
 const progress=document.getElementById('progress');
 const pathwaySpace=document.getElementById('pathway-scroll-space');
