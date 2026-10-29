@@ -935,6 +935,27 @@ body{background:#fff;color:#16364d}
   .vbar{transition:none}
 }
 
+
+/* Consistent editorial captions for photographs */
+figcaption:not(.research-cover-copy) {
+  font: italic .74rem/1.45 var(--sans) !important;
+  color: var(--muted) !important;
+}
+.hero-photo figcaption:not(.research-cover-copy) span,
+.story-image figcaption:not(.research-cover-copy) span {
+  display: block;
+  font: inherit !important;
+  color: var(--muted) !important;
+}
+.closing-section-band {
+  background: var(--sky);
+  border-top: 5px solid var(--blue);
+}
+.closing-section-band .closing-section {
+  padding-top: 82px;
+  padding-bottom: 96px;
+}
+
 </style>
 </head>
 <body>
@@ -958,7 +979,7 @@ body{background:#fff;color:#16364d}
 
   <figure class="hot-bottle-inline">
     <img src="photo%2015.png" alt="Woman with a heat pack" loading="lazy">
-    <figcaption><strong>One in Six Queensland women are diagnosed with endometriosis</strong><span>Wikimedia Commons: Vulvani</span></figcaption>
+    <figcaption>One in Six Queensland women are diagnosed with endometriosis<span>Wikimedia Commons: Vulvani</span></figcaption>
   </figure>
 
   <p>Endometriosis affects an estimated one in six Queensland women by their early 40s, while diagnosis can take an average of six to eight years in Australia.</p>
@@ -1106,7 +1127,7 @@ body{background:#fff;color:#16364d}
   <h2>What a diagnosis can change</h2>
   <p>Brisbane gynaecologist Dr Melinda Heywood said the experience of seeking a diagnosis could be shaped by how women's pain is understood and treated.</p>
   <figure class="story-image melinda-image">
-    <img src="melinda-heywood.jpg" alt="Dr Melinda Heywood" loading="lazy">
+    <img src="photo%204.png" alt="Dr Melinda Heywood" loading="lazy">
     <figcaption>Diagnosis provides important relief from uncertainty</figcaption>
   </figure>
   <blockquote class="quote">“Women’s symptoms can be written off as anxiety or hysteria,” she said.</blockquote>
@@ -1151,11 +1172,13 @@ body{background:#fff;color:#16364d}
   <div class="float-clear" aria-hidden="true"></div>
 </section>
 
-<section class="section closing-section" id="wait-continues">
+<section class="closing-section-band" id="wait-continues">
+  <div class="section closing-section">
   <h2>The wait continues</h2>
   <p>For Smith, an earlier explanation might have changed how she understood her symptoms as a teenager.</p>
   <figure class="inline-photo closing-inline-photo">
     <img src="photo%2011.png" alt="Photograph accompanying the story" loading="lazy">
+    <figcaption>Just because something is common doesn't mean it's normal</figcaption>
   </figure>
   <p>Her diagnosis eventually provided an explanation and access to university support.</p>
   <p>But the experiences of Johnston, Cusack and Webb show that the path towards answers is different for everyone.</p>
@@ -1167,6 +1190,7 @@ body{background:#fff;color:#16364d}
   <p>Smith's experience offers a reminder of what an answer can mean after years of uncertainty.</p>
   <blockquote class="quote">“Just because something is common doesn’t mean it’s normal,” she said.</blockquote>
   <div class="float-clear" aria-hidden="true"></div>
+  </div>
 </section>
 </main>
 <script>
