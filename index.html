@@ -621,6 +621,150 @@ footer{background:#0b2231;color:#e0eaf0;border-color:#315166}
   .dot-section .dot-lead{font-size:1.05rem}
 }
 @media(prefers-reduced-motion:reduce){.dot-section .person-mark{transition:none}}
+
+/* Final layout for the supplied script */
+:root{
+  --navy:#12334b;--blue:#3f78a0;--sky:#dcecf6;--pale:#f2f8fc;
+  --teal:#4e87ad;--pink:#bed9eb;--pink-pale:#edf5fa;
+  --ink:#16364d;--muted:#587184;--line:#cbdfea;--white:#fff;
+}
+body{background:#fff;color:#16364d;font-size:16px;line-height:1.75}
+h1,h2,h3,h4,p{margin-top:0}
+h1,h2,h3,h4{color:#12334b}
+.hero{
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);
+  gap:clamp(24px,5vw,68px);align-items:center;
+  min-height:76vh;padding:clamp(44px,7vh,82px) clamp(22px,7vw,100px);
+  background:linear-gradient(125deg,#12334b 0%,#174766 62%,#356f96 100%);
+}
+.hero-copy{min-width:0;max-width:920px}
+.hero h1{
+  max-width:900px;margin:0 0 25px;color:#fff;
+  font:500 clamp(2.15rem,3.3vw,3.8rem)/1.08 var(--serif);
+  letter-spacing:-.035em;text-wrap:balance;overflow-wrap:normal;
+}
+.hero .dek{max-width:690px;color:#e3f0f8;font:clamp(1.12rem,1.7vw,1.38rem)/1.55 var(--serif)}
+.hero .byline{margin:22px 0 0;color:#d1e4f0;font-size:.86rem}
+.hero-photo{display:flex;flex-direction:column;align-items:stretch;gap:0;min-width:0;margin:0}
+.hero-photo img{display:block;width:100%;height:clamp(260px,38vw,480px);object-fit:cover;object-position:center}
+.hero-photo figcaption{font: .8rem/1.5 var(--sans);margin-top:9px;color:#e2eff7}
+.progress{background:#79afd0}
+.section{max-width:1120px;margin:0 auto;padding:clamp(55px,8vw,92px) 24px}
+.section p{max-width:74ch;font-size:1.02rem}
+.section h2{font:500 clamp(2.2rem,4.5vw,3.5rem)/1.08 var(--serif);letter-spacing:-.03em;margin:0 0 24px;color:#12334b}
+.opening-paragraph{font:clamp(1.3rem,2.1vw,1.65rem)/1.5 var(--serif);color:#234f6b}
+.editorial-opening{max-width:1030px;display:flow-root;padding-top:60px;padding-bottom:76px}
+.editorial-opening p{max-width:75ch}
+.hot-bottle-inline{float:right;width:min(37%,315px);margin:10px 0 22px 32px}
+.hot-bottle-inline img{display:block;width:100%;height:auto;max-height:470px;object-fit:cover}
+.hot-bottle-inline figcaption{margin-top:10px;font:.76rem/1.45 var(--sans);color:#587184}
+.hot-bottle-inline figcaption strong{display:block;color:#12334b;font-weight:700}
+.hot-bottle-inline figcaption span{display:block;margin-top:4px;font-style:italic}
+.float-clear{clear:both}
+.quote{margin:30px 0;padding:8px 0 8px 23px;border-left:3px solid #78aaca;color:#316b92;font:clamp(1.35rem,2.5vw,2rem)/1.4 var(--serif)}
+.quote cite{display:block;margin-top:12px;color:#587184;font:normal .78rem/1.5 var(--sans);letter-spacing:0;text-transform:none}
+.dot-scene-scroll{height:135svh;height:135dvh;position:relative;margin:0;z-index:4}
+.dot-section{position:sticky;top:0;isolation:isolate;min-height:100svh;height:100svh;overflow:hidden;padding:0;background:#12334b;color:#fff}
+.dot-section::before{background:rgba(9,32,49,.14)!important}
+.dot-section .dot-field{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;padding:clamp(12px,2vw,28px);display:grid;grid-template-columns:repeat(26,minmax(0,1fr));grid-template-rows:repeat(17,minmax(0,1fr));place-items:center;gap:clamp(3px,.5vw,8px);opacity:1;background:transparent;border:0;border-radius:0}
+.dot-section .person-mark,.dot-section .person-mark:nth-child(7n+1),.dot-section .person-mark:nth-child(11n+4),.dot-section .person-mark:nth-child(5n+2),.dot-section .person-mark:nth-child(9n+4){display:block;width:clamp(6px,.8vw,12px);height:clamp(6px,.8vw,12px);min-width:0;place-self:center;border-radius:50%;background:#e6f2f8!important;opacity:1!important;box-shadow:0 0 0 1px #d5ebf433}
+.dot-section .person-mark:nth-child(3n+1){background:#93c4e1!important}
+.dot-story{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:22px;text-align:center}
+.dot-copy{width:min(100%,580px);margin:0 auto;padding:clamp(18px,3vw,28px);background:rgba(13,43,64,.94);border:1px solid #9fc7df;box-shadow:none}
+.dot-section h2{font:500 clamp(1.05rem,1.6vw,1.32rem)/1.5 var(--sans);letter-spacing:0;color:#fff;margin:0 auto 12px;max-width:530px}
+.dot-section .dot-lead{font:700 clamp(1.15rem,1.9vw,1.5rem)/1.45 var(--sans);color:#e0f0f8;margin:0}
+.dot-section .dot-lead strong{font-weight:800;color:#fff}
+.evie-story-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,.8fr);gap:clamp(26px,5vw,62px);align-items:start}
+.evie-story-copy{min-width:0}
+.evie-image{position:sticky;top:36px;margin:12px 0 20px}
+.story-image{margin:30px 0}
+.story-image img{display:block;width:100%;max-height:580px;object-fit:cover}
+.story-image figcaption{margin-top:9px;font:.79rem/1.45 var(--sans);color:#4f6c80}
+.timeline-section{max-width:1120px}
+.timeline-section>h2{font:500 clamp(2.7rem,5vw,4.2rem)/1.04 var(--serif);color:#12334b;margin-bottom:18px}
+.timeline-stat-copy{max-width:850px;margin:0 0 44px;font:1.08rem/1.65 var(--serif);color:#395b72}
+.timeline-stat-number{display:inline-block;font:700 clamp(1.25rem,2.5vw,1.75rem)/1.1 var(--sans);color:#174f75;white-space:nowrap}
+.track-heading{font:500 clamp(1.45rem,2.4vw,1.9rem)/1.25 var(--serif);color:#12334b;margin:35px 0 14px}
+.pathway-scroll-space{height:125svh;height:125dvh;position:relative;margin:10px 0 30px}
+.pathway-viewport{position:sticky;top:40px;overflow:hidden;width:100%;padding:8px 0 22px}
+.pathway-track{display:flex;gap:16px;width:max-content;will-change:transform;transform:translateX(0)}
+.pathway-stage{flex:0 0 clamp(220px,24vw,280px);min-height:260px;padding:22px 20px;background:#f1f7fb;border:1px solid #cbdfea;border-radius:3px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.pathway-visual{width:62px;height:62px;display:grid;place-items:center;background:#dcecf6;border-radius:50%;flex-shrink:0}
+.pathway-visual svg{width:38px;height:38px;fill:none;stroke:#376f91;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pathway-stage h4{margin:0;font:500 1.2rem/1.3 var(--serif);color:#12334b}
+.timeline-scroller{overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;padding:8px 2px 18px;scrollbar-color:#8bb7d1 #eaf3f8;scrollbar-width:thin}
+.timeline-track{position:relative;display:flex;gap:0;width:max-content;min-width:100%;padding:7px 0 14px}
+.timeline-node{position:relative;flex:0 0 175px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:0 14px 12px 0;background:transparent;border:0;text-align:left;cursor:pointer;scroll-snap-align:center;color:#16364d}
+.timeline-node:after{content:"";position:absolute;z-index:0;top:24px;left:30px;right:0;height:2px;background:#b8d5e6}
+.timeline-node:last-child:after{display:none}
+.node-dot{z-index:1;display:grid;place-items:center;width:48px;height:48px;border:2px solid #84b2ce;border-radius:50%;background:#fff;color:#2f6892;font-size:.72rem;font-weight:700}
+.timeline-node.is-active .node-dot{background:#376f91;border-color:#376f91;color:#fff;box-shadow:0 0 0 5px #376f911c}
+.timeline-node .node-title{font:500 1.05rem/1.25 var(--serif);color:#12334b}
+.timeline-node.is-active .node-title{color:#2f6892}
+.timeline-detail-card{margin-top:18px;padding:clamp(22px,4vw,36px);background:#f0f6fa;border-left:3px solid #5b91b4}
+.timeline-detail-top{font-size:.86rem;font-weight:700;color:#2f6892}
+.timeline-detail-card h3{font:500 clamp(1.5rem,3vw,2.2rem)/1.2 var(--serif);color:#12334b;margin:16px 0}
+.timeline-detail-card p{max-width:800px}
+.timeline-quote{font:clamp(1.3rem,2.5vw,1.8rem)/1.4 var(--serif);color:#316b92;border-left:2px solid #8ebdda;padding-left:19px;margin:23px 0 9px}
+.timeline-credit{font-size:.8rem!important;color:#587184}
+.timeline-afterword{margin-top:35px}
+.lived-experience .sophie-image{float:right;width:min(39%,350px);margin:5px 0 24px 32px}
+.lived-experience{display:flow-root}
+.research-section .research-image{float:right;width:min(38%,335px);margin:5px 0 22px 32px}
+.research-section{display:flow-root}
+.research-graphic{clear:both;display:grid;gap:0;margin:35px 0 28px;border:1px solid #cbdfea;background:#fff}
+.research-group-head,.research-compare-row{display:grid;grid-template-columns:minmax(150px,1fr) minmax(100px,.7fr) minmax(100px,.7fr);align-items:center;gap:12px;padding:15px 18px}
+.research-group-head{background:#edf5fa;color:#315a73;font-size:.82rem;font-weight:700;border-bottom:1px solid #cbdfea}
+.research-compare-row+ .research-compare-row{border-top:1px solid #e0ebf2}
+.research-compare-row strong{font:500 1.08rem/1.35 var(--serif);color:#12334b}
+.group-mark{display:flex;align-items:center;justify-content:center;gap:7px;min-height:30px}
+.group-mark i{width:10px;height:10px;border-radius:50%;background:#9bbbd0;display:block}
+.group-mark.suspected i{width:15px;height:15px;background:#376f91}
+.diagnosis-section{display:flow-root}
+.diagnosis-section .melinda-image{float:left;width:min(33%,280px);margin:8px 34px 22px 0}
+.diagnosis-section .melinda-image img{max-height:420px;object-position:center top}
+.diagnosis-section p,.diagnosis-section blockquote{max-width:72ch}
+.safe-question-list{margin:36px 0 48px;display:grid;gap:14px}
+.safe-question{min-height:190px;display:grid;grid-template-columns:42px 64px minmax(0,1fr);align-items:center;gap:18px;padding:24px clamp(18px,4vw,36px);background:#f1f7fb;border:1px solid #d0e1ec;scroll-margin-top:12vh}
+.safe-number{font:700 1.05rem var(--sans);color:#3f78a0}
+.safe-question-icon{width:60px;height:60px;display:grid;place-items:center;border-radius:50%;background:#dcecf6}
+.safe-question-icon svg{width:38px;height:38px;fill:none;stroke:#376f91;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.safe-question p{margin:0;font:500 clamp(1.25rem,2.5vw,1.8rem)/1.3 var(--serif);color:#12334b}
+.closing-section{padding-top:85px;padding-bottom:95px}
+.closing-section h2{margin-bottom:28px}
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:46px 22px 52px}
+  .hero h1{font-size:clamp(2.1rem,7.6vw,3rem)}
+  .hero-photo img{height:clamp(220px,64vw,380px)}
+  .editorial-opening{padding-top:40px;padding-bottom:55px}
+  .hot-bottle-inline{float:none;width:min(100%,420px);margin:26px auto}
+  .dot-scene-scroll{height:128svh;height:128dvh}
+  .dot-section .dot-field{grid-template-columns:repeat(17,minmax(0,1fr));grid-template-rows:repeat(26,minmax(0,1fr));padding:8px;gap:3px}
+  .dot-section .person-mark,.dot-section .person-mark:nth-child(7n+1),.dot-section .person-mark:nth-child(11n+4),.dot-section .person-mark:nth-child(5n+2),.dot-section .person-mark:nth-child(9n+4){width:clamp(4px,1.1vw,7px);height:clamp(4px,1.1vw,7px)}
+  .dot-copy{padding:16px}
+  .dot-section h2{font-size:1rem}
+  .dot-section .dot-lead{font-size:1.03rem}
+  .evie-story-layout{grid-template-columns:1fr}
+  .evie-image{position:static;max-width:440px;margin:18px 0}
+  .pathway-scroll-space{height:108svh;height:108dvh}
+  .pathway-viewport{top:22px}
+  .pathway-stage{flex-basis:min(75vw,285px);min-height:225px}
+  .timeline-node{flex-basis:145px}
+  .lived-experience .sophie-image,.research-section .research-image{float:none;width:min(100%,430px);margin:24px auto}
+  .diagnosis-section .melinda-image{float:none;width:min(100%,310px);margin:15px auto 26px}
+  .research-group-head,.research-compare-row{grid-template-columns:minmax(110px,1fr) minmax(72px,.7fr) minmax(72px,.7fr);gap:6px;padding:13px 10px}
+  .research-group-head{font-size:.7rem}
+  .research-compare-row strong{font-size:.95rem}
+  .group-mark{gap:4px}
+  .group-mark i{width:7px;height:7px}
+  .group-mark.suspected i{width:10px;height:10px}
+  .safe-question{grid-template-columns:26px 50px minmax(0,1fr);gap:12px;padding:22px 15px;min-height:160px}
+  .safe-question-icon{width:48px;height:48px}
+  .safe-question-icon svg{width:30px;height:30px}
+  .safe-question p{font-size:1.18rem}
+}
+@media(prefers-reduced-motion:reduce){.dot-section .person-mark{transition:none}.pathway-track{transition:none}}
+
 </style>
 </head>
 <body>
@@ -638,257 +782,237 @@ footer{background:#0b2231;color:#e0eaf0;border-color:#315166}
 </section>
 
 <main>
-<section class="section narrow editorial-opening" id="lead">
+<section class="section editorial-opening" id="lead">
   <p class="opening-paragraph">When Evie Smith prepared for surgery after years of severe period pain, she was frightened the doctors would find nothing.</p>
   <p>For Smith, the possibility of leaving hospital without an explanation meant continuing to question symptoms that had affected her since her first period at 12.</p>
 
   <figure class="hot-bottle-inline">
-    <img src="photo%2015.png" alt="A woman using a hot-water bottle for pain relief" loading="lazy">
+    <img src="photo%2015.png" alt="Woman with a heat pack" loading="lazy">
     <figcaption><strong>One in Six Queensland women are diagnosed with endometriosis</strong><span>Wikimedia Commons: Vulvani</span></figcaption>
   </figure>
 
   <p>Endometriosis affects an estimated one in six Queensland women by their early 40s, while diagnosis can take an average of six to eight years in Australia.</p>
-  <p>For women living with unexplained symptoms, that wait can mean more than managing pain – it can also mean questioning whether their experiences are normal and whether they will be taken seriously.</p>
-  <p>A 2026 Australian study found that women who suspected they had endometriosis reported greater anxiety symptoms than those with a confirmed diagnosis.</p>
-  <p>Meanwhile, University of Queensland (UQ) researchers have developed the SAFE score, a screening tool designed to identify women at increased risk and prompt further investigation.</p>
-  <p>This tool could be revolutionary in shortening the diagnostic gap, easing the psychological uncertainty of waiting for an answer.</p>
+  <p>For women living with unexplained symptoms, that wait can mean more than managing pain. It can also mean questioning whether their experiences are normal and whether they will be taken seriously.</p>
+  <p>A 2026 Australian study has drawn attention to the psychological toll of suspected endometriosis, while University of Queensland (UQ) researchers have developed the SAFE score, a screening tool designed to identify women at increased risk and prompt further investigation.</p>
+  <p>If the tool can help recognise risk earlier, it could offer a new way to address the diagnostic gap and easing the psychological uncertainty of waiting for an answer.</p>
   <div class="float-clear" aria-hidden="true"></div>
 </section>
 
 <div class="dot-scene-scroll">
-<section class="dot-section" id="queensland-dots" aria-labelledby="queensland-dot-title">
-  <div class="people-grid dot-field" id="people-grid" role="img" aria-label="442 dots, each representing an estimated 1,000 Queensland women diagnosed with endometriosis by their early to mid-40s."></div>
-  <div class="dot-story">
-    <div class="dot-copy">
-      <h2 id="queensland-dot-title">1 dot = 1,000 Queensland women estimated to have been diagnosed with endometriosis by their early to mid-40s.</h2>
-      <p class="dot-lead"><strong>How many more could be living without answers?</strong></p>
+  <section class="dot-section" id="queensland-dots" aria-labelledby="queensland-dot-title">
+    <div class="people-grid dot-field" id="people-grid" role="img" aria-label="442 dots. Each represents 1,000 Queensland women estimated to have been diagnosed with endometriosis by their early to mid-40s."></div>
+    <div class="dot-story">
+      <div class="dot-copy">
+        <h2 id="queensland-dot-title">1 dot = 1,000 Queensland women estimated to have been diagnosed with endometriosis by their early to mid-40s.</h2>
+        <p class="dot-lead"><strong>How many more could be living without answers?</strong></p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
 
 <section class="section evie-section" id="evie">
-  
-  
   <div class="evie-story-layout">
     <div class="evie-story-copy">
       <blockquote class="quote">“You’re so scared that they’re going to go in and find nothing and all your answers will just be nothingness,” Smith said.</blockquote>
       <p>Smith, 21, said she had experienced severe period pain since her first period at 12.</p>
       <p>During high school, she tried different hormonal contraceptives, but her symptoms continued.</p>
-      <p>After debilitating pain during a holiday in April 2025, she decided to pursue further investigation. Surgery in September that year confirmed endometriosis and adenomyosis.</p>
-      <p>For Smith, the diagnosis opened up treatment options and helped her access university accommodations, including extensions, separate exam arrangements and permission to use heat packs during exams.</p>
+      <p>After debilitating pain during a holiday in April 2025, she decided to pursue further investigation and surgery in September that year confirmed endometriosis.</p>
+      <p>For Smith, the diagnosis opened up treatment options and helped her access university accommodations, including extensions, separate exam arrangements, and permission to use heat packs during exams.</p>
       <blockquote class="quote">“Being able to put a name to it and get accommodations around it is so good,” she said.</blockquote>
     </div>
     <figure class="story-image evie-image">
       <img src="photo%2013.png" alt="Evie Smith" loading="lazy">
-      <figcaption><strong>For Evie, a diagnosis took nine years.</strong></figcaption>
+      <figcaption>For Evie, a diagnosis took 9 years</figcaption>
     </figure>
   </div>
-  <p>For Smith, finally receiving an explanation changed how she understood years of pain. But for other women, the uncertainty continues — sometimes because they do not recognise their symptoms as something that warrants investigation.</p>
 </section>
 
 <section class="section timeline-section" id="journey">
-  
   <h2>Diagnostic Timeline</h2>
-  <p class="intro">Every diagnosis looks different.</p>
-  <p class="timeline-stat-copy">The average diagnostic length in Australia is <strong class="timeline-stat-number">6–8 years</strong> according to Endometriosis Australia. However, a study by the <em>Journal of Psychosomatic Research</em> in June 2025 found that the average diagnostic delay in Australia was <strong class="timeline-stat-number">12.3 years</strong>.</p>
+  <p class="timeline-stat-copy">Every diagnosis looks different. The average diagnostic length in Australia is <strong class="timeline-stat-number">6–8 years</strong> according to Endometriosis Australia. However, a study by the <em>Journal of Psychosomatic Research</em> in June last year found that Australian diagnostic delay was <strong class="timeline-stat-number">12.3 years</strong> long.</p>
 
   <h3 class="track-heading">Track one: The wider diagnostic pathway</h3>
-  
   <div class="pathway-scroll-space" id="pathway-scroll-space">
-    <div class="pathway-viewport" id="pathway-viewport" aria-label="Diagnostic pathway that moves as you scroll">
+    <div class="pathway-viewport" id="pathway-viewport" aria-label="The diagnostic pathway moves as the reader scrolls">
       <div class="pathway-track" id="pathway-track">
         <article class="pathway-stage">
           <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="8" width="34" height="33" rx="4"/><path d="M15 4v9M33 4v9M8 18h32M17 25h5M27 25h5M17 32h5"/></svg></span>
-          <h4>Symptoms begin</h4><p>Pain, heavy bleeding or other symptoms appear.</p>
+          <h4>Symptoms begin.</h4>
         </article>
         <article class="pathway-stage">
           <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="16" r="8"/><path d="M7 40c1-9 7-14 14-14s13 5 14 14M35 8v13M29 14h12"/></svg></span>
-          <h4>See a GP</h4><p>A person seeks help and describes their symptoms.</p>
+          <h4>A person seeks help from a GP.</h4>
         </article>
         <article class="pathway-stage">
           <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="5" width="30" height="38" rx="3"/><path d="M16 15h16M16 23h16M16 31h10M29 34l3 3 6-8"/></svg></span>
-          <h4>Manage symptoms</h4><p>Treatment may be tried while further investigation is considered.</p>
+          <h4>Symptoms may be managed while further investigation is considered.</h4>
         </article>
         <article class="pathway-stage">
           <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 7h22l8 8v27H9zM31 7v9h8M15 23h17M15 30h17M15 37h11"/></svg></span>
-          <h4>Further assessment</h4><p>Referral, specialist assessment or imaging may follow.</p>
+          <h4>Referral, specialist assessment or imaging may follow.</h4>
         </article>
         <article class="pathway-stage">
           <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m15 24 6 6 13-14"/></svg></span>
-          <h4>Diagnosis</h4><p>A diagnosis may eventually be established.</p>
+          <h4>A diagnosis may eventually be established.</h4>
         </article>
       </div>
     </div>
   </div>
 
   <h3 class="track-heading">Track two: Evie's experience</h3>
-  
-  <div class="timeline-scroller" id="timeline-scroller" tabindex="0" role="region" aria-label="Interactive timeline of Evie Smith's diagnostic journey">
+  <div class="timeline-scroller" id="timeline-scroller" tabindex="0" role="region" aria-label="Evie's diagnostic timeline. Select each milestone to see her experience.">
     <div class="timeline-track">
-      <button class="timeline-node is-active" type="button" aria-pressed="true" data-kicker="Age 12" data-title="First symptoms" data-copy="Smith said severe pain began with her first period at 12. She had little basis for comparison and assumed other people experienced the same thing." data-quote="I just had it in my head like, ‘Well, everyone must just be experiencing this.’" data-credit="Evie Smith"><span class="node-dot">12</span><span class="node-title">First symptoms</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Trying to manage symptoms" data-copy="Smith tried different hormonal contraceptives through high school, but her symptoms continued." data-quote="Being able to put a name to it and get accommodations around it is so good." data-credit="Evie Smith"><span class="node-dot">HS</span><span class="node-title">Treatment attempts</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="April 2025" data-title="Seeking further investigation" data-copy="After debilitating pain during a holiday, Smith decided to pursue further investigation." data-quote="You’re so scared that they’re going to go in and find nothing and all your answers will just be nothingness." data-credit="Evie Smith"><span class="node-dot">25</span><span class="node-title">Seeking answers</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="September 2025" data-title="Surgery confirms the diagnosis" data-copy="Surgery confirmed endometriosis and adenomyosis. The diagnosis helped Smith access treatment and university accommodations." data-quote="Being able to put a name to it and get accommodations around it is so good." data-credit="Evie Smith"><span class="node-dot">Dx</span><span class="node-title">Diagnosis</span></button>
+      <button class="timeline-node is-active" type="button" aria-pressed="true" data-kicker="Age 12" data-title="Severe pain begins with her first period" data-copy="Smith said she had experienced severe period pain since her first period at 12." data-quote="I guess this is what everyone is dealing with." data-credit="Evie Smith"><span class="node-dot">12</span><span class="node-title">Age 12</span></button>
+      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Different hormonal contraceptives are tried; symptoms continue" data-copy="During high school, Smith tried different hormonal contraceptives, but her symptoms continued." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith"><span class="node-dot">HS</span><span class="node-title">High school</span></button>
+      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="April 2025" data-title="Debilitating pain prompts her to seek further help" data-copy="After debilitating pain during a holiday in April 2025, Smith decided to pursue further investigation." data-quote="I just didn't want to live like that anymore." data-credit="Evie Smith"><span class="node-dot">2025</span><span class="node-title">April 2025</span></button>
+      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="September 2025" data-title="Surgery confirms endometriosis" data-copy="Surgery in September 2025 confirmed endometriosis." data-quote="You’re so scared that they’re going to go in and find nothing and all your answers will just be nothingness." data-credit="Evie Smith"><span class="node-dot">Dx</span><span class="node-title">September 2025</span></button>
     </div>
   </div>
   <div class="timeline-detail-card" aria-live="polite">
     <div class="timeline-detail-top"><span id="timeline-kicker">Age 12</span></div>
-    <h3 id="timeline-title">First symptoms</h3>
-    <p id="timeline-copy">Smith said severe pain began with her first period at 12. She had little basis for comparison and assumed other people experienced the same thing.</p>
-    <blockquote class="timeline-quote" id="timeline-quote">“I just had it in my head like, ‘Well, everyone must just be experiencing this.’”</blockquote>
+    <h3 id="timeline-title">Severe pain begins with her first period</h3>
+    <p id="timeline-copy">Smith said she had experienced severe period pain since her first period at 12.</p>
+    <blockquote class="timeline-quote" id="timeline-quote">“I guess this is what everyone is dealing with.”</blockquote>
     <p class="timeline-credit" id="timeline-credit">Evie Smith</p>
   </div>
-  <p class="timeline-afterword">For Smith, finally receiving an explanation changed how she understood years of pain. For other women, the uncertainty continues — sometimes because they do not recognise their symptoms as something that warrants investigation.</p>
+  <p class="timeline-afterword">For Smith, finally receiving an explanation changed how she understood years of pain.</p>
+  <p>But for other women, the uncertainty continues.</p>
+  <p>Sometimes that uncertainty begins because they do not recognise their symptoms as something that warrants investigation.</p>
 </section>
 
-<section class="band" id="lived-experience"><div class="band-inner">
-  <div class="reveal">
-    
-    <h2>When symptoms feel normal</h2>
-    <p>For 24-year-old Sophie Johnston, the uncertainty began with an assumption that her symptoms were simply part of having a period.</p>
-    <p>She experienced irregular periods and severe cramping from her first period at 16, but did not initially question whether they were unusual.</p>
-    <blockquote class="quote">“I always just thought it was normal and I never talked to anyone about it,” Johnston said.</blockquote>
-    <p>A conversation with a colleague eventually introduced her to endometriosis as a possible explanation for her symptoms.</p>
-    <blockquote class="quote">“If my friend never said something about it, I probably would still have no idea,” she said.</blockquote>
-    <p>Twenty-one-year-old Laura Cusack described a similar struggle to understand her symptoms.</p>
-    <p>Severe cramps sometimes left her spending two days a month in bed, while heavy bleeding contributed to low iron levels and pain and exhaustion affected her schoolwork. Although her mother had endometriosis and recognised a possible connection, finding a treatment that worked took time.</p>
-    <blockquote class="quote">“The biggest thing for me was just being so exhausted and just unsure,” Cusack said.</blockquote>
-  </div>
+<section class="section lived-experience" id="normal">
+  <h2>When symptoms feel normal</h2>
   <figure class="story-image sophie-image">
-    <img src="photo%2014.png" alt="Sophie Johnston holding a reptile" loading="lazy">
-    <figcaption><strong>Symptoms can go uninvestigated for years.</strong></figcaption>
+    <img src="photo%2014.png" alt="Sophie Johnston" loading="lazy">
+    <figcaption>Symptoms can go uninvestigated for years</figcaption>
   </figure>
-</div></section>
-
-
-<section class="section narrow reveal" id="charlee">
-  
-  <h2>When is it worth seeking answers?</h2>
-  <p>Charlee Webb has experienced irregular periods, heavy bleeding and severe cramps but has not pursued further specialist investigation. She said comparing herself with other women sometimes leads her to minimise her symptoms.</p>
-  <blockquote class="quote">“We could have the worst period of our life and go, ‘Oh, well, everyone … it’s like that.’”<cite>Charlee Webb</cite></blockquote>
-  <p>The time, money and effort involved in seeking a diagnosis have also influenced her decision to wait while her symptoms remain manageable. Her experience does not establish that she has endometriosis. It shows how uncertainty can shape healthcare decisions when someone is unsure whether their symptoms are serious enough to investigate.</p>
-  <p class="source-caption">Persistent or disruptive pelvic pain and menstrual symptoms can have a range of causes. This story is not a diagnostic guide; people with concerns should discuss their symptoms with a qualified healthcare professional.</p>
+  <p>For 24-year-old Sophie Johnston, the uncertainty began with an assumption that her symptoms were simply part of having a period.</p>
+  <p>She experienced irregular periods and severe cramping from her first period at 16, but did not initially question whether they were unusual.</p>
+  <blockquote class="quote">“I always just thought it was normal and I never talked to anyone about it,” Johnston said.</blockquote>
+  <p>A conversation with a colleague eventually introduced her to endometriosis as a possible explanation for her symptoms.</p>
+  <blockquote class="quote">“If my friend never said something about it, I probably would still have no idea,” she said.</blockquote>
+  <p>Johnston’s experience highlights how uncertainty can begin before someone seeks medical help.</p>
+  <p>If symptoms seem normal, there may be little reason to look for an explanation.</p>
 </section>
 
+<section class="section research-section" id="research">
+  <h2>The research behind the uncertainty</h2>
+  <figure class="story-image research-image">
+    <img src="photo%205.png" alt="Image accompanying the psychological research" loading="lazy">
+    <figcaption>New research shows that diagnostic delay leads to increased anxiety and depression</figcaption>
+  </figure>
+  <p>A study published in the <em>Journal of Psychosomatic Research</em> in July 2026 examined psychological distress, health-related quality of life and pain among Australians with confirmed or suspected endometriosis.</p>
+  <p>Researchers surveyed 653 participants, including 550 with a confirmed diagnosis and 103 who suspected they had the condition.</p>
+  <p>The suspected endometriosis group reported significantly greater anxiety and pelvic pain symptoms than the diagnosed group.</p>
 
-<section class="section" id="diagnosis">
-  
-  <h2>Sometimes, a name changes the story.</h2>
-  <div class="researcher-feature">
-    <figure class="portrait-placeholder">
-      <img src="melinda-heywood.jpg" alt="Portrait of Dr Melinda Heywood, Brisbane gynaecologist" loading="lazy">
-      <figcaption>Dr Melinda Heywood, Brisbane gynaecologist.</figcaption>
-    </figure>
-    <div class="researcher-copy">
-      <blockquote class="quote">“For some women, though, having a label is important: they want validation and to know there is a clear cause for their pain.”<cite>Dr Melinda Heywood · Brisbane gynaecologist</cite></blockquote>
-      <p>Heywood said the experience of seeking a diagnosis can be shaped by how women's pain is understood and treated. People who have repeatedly been told their symptoms are normal may arrive at specialist appointments feeling they must fight to have their concerns investigated.</p>
-      <p>A diagnosis can offer an explanation for pain, help patients communicate their needs and open pathways to treatment and practical support. However, Heywood cautioned against assuming that everyone with pelvic pain has endometriosis or that surgery is always necessary before treatment can begin. Pelvic pain can have multiple causes, and management can involve several approaches.</p>
+  <div class="research-graphic" role="img" aria-label="The suspected endometriosis group reported significantly greater anxiety and pelvic pain symptoms than the diagnosed group.">
+    <div class="research-group-head">
+      <span></span><span>Diagnosed group</span><span>Suspected group</span>
+    </div>
+    <div class="research-compare-row">
+      <strong>Anxiety symptoms</strong>
+      <span class="group-mark diagnosed" aria-hidden="true"><i></i></span>
+      <span class="group-mark suspected" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div class="research-compare-row">
+      <strong>Pelvic pain symptoms</strong>
+      <span class="group-mark diagnosed" aria-hidden="true"><i></i></span>
+      <span class="group-mark suspected" aria-hidden="true"><i></i><i></i><i></i></span>
     </div>
   </div>
+  <p>The findings draw attention to the experiences of women who are living with symptoms but have not yet received a confirmed diagnosis.</p>
+  <p>For 21-year-old Laura Cusack, pain and exhaustion affected her schoolwork and everyday life.</p>
+  <p>Severe cramps sometimes left her spending two days a month in bed, while heavy bleeding contributed to low iron levels.</p>
+  <p>Although her mother had endometriosis and recognised a possible connection, finding a treatment that worked took time.</p>
+  <blockquote class="quote">“The biggest thing for me was just being so exhausted and just unsure,” Cusack said.</blockquote>
 </section>
 
-<section class="band" id="psychology"><div class="band-inner">
-  <div class="reveal">
-    
-    <h2>The symptoms are not only physical.</h2>
-    <p>A 2026 Australian study in the <em>Journal of Psychosomatic Research</em> examined psychological distress, health-related quality of life and pain among people with diagnosed or suspected endometriosis.</p>
-    <p>It surveyed 653 participants: 550 reported a confirmed diagnosis and 103 suspected they had the condition. The suspected group reported significantly greater pelvic pain and anxiety symptoms.</p>
-    <p>The study was cross-sectional, so it cannot establish that diagnostic uncertainty causes anxiety or that receiving a diagnosis will necessarily resolve it. Pain, access to healthcare and other circumstances may also affect wellbeing.</p>
-    <p>A separate 2025 Australian study, “A name to the pain”, found that 96.2 per cent of participants with endometriosis considered diagnosis important. Participants described validation, legitimacy and relief from uncertainty.</p>
-    <p class="source-caption">These studies describe their own samples. Their findings should not be interpreted as proof that diagnosis alone prevents psychological distress.</p>
-  </div>
-  
-</div></section>
-
-<section class="section" id="symptoms">
-  
-  <h2>Symptoms can be recorded long before diagnosis.</h2>
-  <p class="intro">An Australian study of general-practice records looked at symptoms documented before an endometriosis diagnosis among 19,786 women aged 14–49. These records do not capture every symptom experienced or everyone who suspects they have the condition, but they provide a picture of what appeared in participating practices.</p>
-  <div class="chart-wrap" id="symptom-chart" aria-label="Vertical bar chart showing symptoms documented before diagnosis and other conditions recorded in an Australian GP cohort">
-    <h3 class="chart-heading">What GPs recorded around diagnosis</h3>
-    <p class="chart-subcopy">Share of women in the Australian GP cohort, 2011–2021. Blue bars show symptoms documented before diagnosis; pink bars show depression and anxiety recorded as other conditions.</p>
-    <div class="chart-legend"><span><i class="legend-swatch"></i>Symptoms before diagnosis</span><span><i class="legend-swatch psych"></i>Other recorded conditions</span></div>
-    <div class="vertical-chart symptoms-chart psych-chart">
-      <div class="vcol" data-value="40.8"><span class="vcol-value">40.8%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Pelvic<br>pain</span></div>
-      <div class="vcol" data-value="22.1"><span class="vcol-value">22.1%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Painful<br>periods</span></div>
-      <div class="vcol" data-value="19.3"><span class="vcol-value">19.3%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Fatigue</span></div>
-      <div class="vcol" data-value="15"><span class="vcol-value">15.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Heavy<br>bleeding</span></div>
-      <div class="vcol" data-value="12.5"><span class="vcol-value">12.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Altered<br>bleeding</span></div>
-      <div class="vcol" data-value="11.5"><span class="vcol-value">11.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Bowel<br>symptoms</span></div>
-      <div class="vcol" data-value="8"><span class="vcol-value">8.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Infertility</span></div>
-      <div class="vcol" data-value="5.7"><span class="vcol-value">5.7%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Pain during<br>sex</span></div>
-      <div class="vcol" data-value="4.5"><span class="vcol-value">4.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Painful<br>urination</span></div>
-      <div class="vcol psych-col" data-value="24"><span class="vcol-value">24.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Depression*</span></div>
-      <div class="vcol psych-col" data-value="22.5"><span class="vcol-value">22.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Anxiety*</span></div>
-    </div>
-    <p class="source-caption">Source: Mazza et al. (2025), <a href="https://www.mja.com.au/journal/2025/223/11/clinical-presentation-investigation-and-management-women-diagnosed" target="_blank" rel="noopener">Medical Journal of Australia</a>, Boxes 2–3. *Depression and anxiety were recorded as other conditions in the cohort; they are not part of the pre-diagnosis symptom list. This chart does not demonstrate that diagnosis caused or prevented psychological distress.</p>
-  </div>
+<section class="section diagnosis-section" id="diagnosis">
+  <h2>What a diagnosis can change</h2>
+  <figure class="story-image melinda-image">
+    <img src="melinda-heywood.jpg" alt="Dr Melinda Heywood" loading="lazy">
+    <figcaption>Diagnosis provides important relief from uncertainty</figcaption>
+  </figure>
+  <p>Brisbane gynaecologist Dr Melinda Heywood said the experience of seeking a diagnosis could be shaped by how women's pain is understood and treated.</p>
+  <blockquote class="quote">“Women’s symptoms can be written off as anxiety or hysteria,” she said.</blockquote>
+  <blockquote class="quote">“Repeatedly being told that symptoms are normal can leave patients questioning their own experiences.”</blockquote>
+  <p>Some arrive at specialist appointments feeling they must fight to have their concerns investigated.</p>
+  <p>Heywood said she believed a diagnosis could provide important relief for people who had spent years searching for an explanation.</p>
+  <blockquote class="quote">“When someone has a laparoscopy and wakes up to be told they have endometriosis, their overwhelming feeling can be relief,” she said.</blockquote>
+  <p>A diagnosis can give patients an explanation for their pain, help them communicate their needs and open pathways to treatment and practical support.</p>
+  <p>For Smith, receiving a diagnosis helped her recognise that the pain she had experienced was not something she had simply exaggerated or needed to tolerate.</p>
+  <p>For 22-year-old Charlee Webb, however, the difficulty has been deciding whether her symptoms warrant further investigation at all.</p>
+  <p>Webb has experienced irregular periods, heavy bleeding, and severe cramps, but said comparing herself with other women sometimes led her to minimise what she was experiencing.</p>
+  <blockquote class="quote">“We could have the worst period of our life and go, ‘Oh, well, it’s like that for everyone,’” she said.</blockquote>
+  <p>The time, money, and effort involved in seeking a diagnosis have also influenced her decision to wait while her symptoms remain manageable.</p>
+  <p>Her experience shows how uncertainty can influence decisions about healthcare when someone is unsure whether their symptoms are serious enough to investigate.</p>
+  <p>It also raises the question of whether earlier recognition could help prompt further assessment.</p>
 </section>
 
-<section class="section" id="safe">
-  
-  <h2>Six factors. A possible earlier signal.</h2>
-  <p class="intro">The SAFE score was developed from data on more than 9,000 women in the Australian Longitudinal Study on Women's Health. Researchers identified six factors associated with a later endometriosis diagnosis, with the strongest predictive performance for symptoms experienced during adolescence, particularly ages 16–19.</p>
-  <blockquote class="quote">“Our goal with the SAFE score was to try and address that lag between the first experience of symptoms and then the actual diagnosis.”<cite>Dr Sally Mortlock · UQ research team</cite></blockquote>
-  <p>Mortlock said the score is intended to help flag when further assessment may be appropriate, not to confirm endometriosis. The team is seeking funding and consulting consumer and clinician groups on how the research could become a practical clinic-facing tool.</p>
-  <div class="safe-box">
-    <h3>Six factors the SAFE model considers</h3>
-    <p>These plain-language prompts explain the factors in the published risk model. They are not a reproduction of the official questionnaire and should not be used to calculate personal risk.</p>
-    <div class="safe-card-grid">
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 25c5-9 9 9 14 0s9 9 14 0 7 6 10 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><p>Have you experienced pelvic pain?</p></article>
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 14v20M14 24h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div><p>Have you sought medical care for pelvic pain?</p></article>
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="rotate(-42 24 24)"><rect x="14" y="8" width="20" height="32" rx="10" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M14 24h20" stroke="currentColor" stroke-width="2.5"/></g></svg></div><p>Have you taken medication for pelvic pain?</p></article>
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6C19 15 11 23 11 31a13 13 0 0 0 26 0C37 23 29 15 24 6Z" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></div><p>Have you experienced heavy menstrual bleeding?</p></article>
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="11" width="30" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M9 19h30M17 7v8M31 7v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></div><p>Have you experienced painful periods?</p></article>
-      <article class="safe-card"><div class="safe-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="36" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M24 17v7M12 29v-5h24v5M12 24h24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></div><p>Is there a family history of endometriosis?</p></article>
-    </div>
-    <p class="source-caption">SAFE is a risk-prediction model, not a diagnostic test. Source: Mishra et al. (2026), <a href="https://pubmed.ncbi.nlm.nih.gov/41938839/" target="_blank" rel="noopener">the published SAFE score study</a>.</p>
+<section class="section safe-section" id="safe">
+  <h2>Could earlier recognition help?</h2>
+  <p>For Dr Sally Mortlock, a member of the UQ research team behind the SAFE score, one challenge is recognising symptoms early enough to prompt investigation.</p>
+  <blockquote class="quote">“Our goal with the SAFE score was to try and address that lag between the first experience of symptoms and then the actual diagnosis,” she said.</blockquote>
+  <p>The SAFE score was developed using data from more than 9,000 women in the Australian Longitudinal Study on Women's Health.</p>
+  <p>Researchers examined symptoms experienced across adolescence and adulthood and identified six factors associated with a later endometriosis diagnosis.</p>
+
+  <div class="safe-question-list" aria-label="Six SAFE questions">
+    <article class="safe-question reveal">
+      <span class="safe-number">1</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 25c5-9 9 9 14 0s9 9 14 0 7 6 10 0"/></svg></span>
+      <p>Do you often experience pelvic pain?</p>
+    </article>
+    <article class="safe-question reveal">
+      <span class="safe-number">2</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 14v20M14 24h20"/></svg></span>
+      <p>Have you sought medical care for pelvic pain?</p>
+    </article>
+    <article class="safe-question reveal">
+      <span class="safe-number">3</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="rotate(-42 24 24)"><rect x="14" y="8" width="20" height="32" rx="10"/><path d="M14 24h20"/></g></svg></span>
+      <p>Have you taken medication for pelvic pain?</p>
+    </article>
+    <article class="safe-question reveal">
+      <span class="safe-number">4</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6C19 15 11 23 11 31a13 13 0 0 0 26 0C37 23 29 15 24 6Z"/></svg></span>
+      <p>Have you experienced heavy menstrual bleeding?</p>
+    </article>
+    <article class="safe-question reveal">
+      <span class="safe-number">5</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="11" width="30" height="28" rx="3"/><path d="M9 19h30M17 7v8M31 7v8"/></svg></span>
+      <p>Do you experience painful periods?</p>
+    </article>
+    <article class="safe-question reveal">
+      <span class="safe-number">6</span>
+      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="5"/><circle cx="12" cy="34" r="5"/><circle cx="36" cy="34" r="5"/><path d="M24 17v7M12 29v-5h24v5M12 24h24"/></svg></span>
+      <p>Is there a family history of endometriosis?</p>
+    </article>
   </div>
-  
+
+  <p>The researchers found that symptoms experienced during adolescence, particularly between the ages of 16 and 19, were especially useful in predicting a later diagnosis.</p>
+  <p>The resulting score is intended to help general practitioners identify people who may be at increased risk and guide decisions about further assessment.</p>
   <p>Mortlock said earlier recognition could help patients and GPs identify symptoms that warrant investigation rather than dismissing them as ordinary period pain.</p>
-  <blockquote class="quote">“Maybe if GPs or even the girls themselves are aware of that, they would go and get it investigated and can start this diagnostic pathway a lot sooner.”<cite>Dr Sally Mortlock</cite></blockquote>
+  <blockquote class="quote">“Maybe if GPs or even the girls themselves are aware of that, they would go and get it investigated and can start this diagnostic pathway a lot sooner,” she said.</blockquote>
+  <p>The research has been published, but further development is needed before the score can be routinely used in general practice.</p>
+  <blockquote class="quote">“We’re on the pathway where we’re trying to translate it into GP clinics but we’re looking for funding to do it”, Mortlock said.</blockquote>
+  <p>The team is currently consulting consumer and clinician groups to determine how the tool should work in clinical settings.</p>
+  <p>While SAFE could help identify people at increased risk, further work will be needed to establish how it performs in practice and whether earlier recognition changes the diagnostic journey.</p>
 </section>
 
-<section class="band" id="funding"><div class="band-inner">
-  <div class="reveal">
-    
-    <h2>Funding the next step.</h2>
-    <p>The SAFE research has been published, but translating the model into a practical tool will require further development and clinical evaluation. Mortlock said the team is seeking funding and working with consumer and clinician groups to determine how the tool should be presented and interpreted.</p>
-    <blockquote class="quote">“We're looking for funding to do it.”<cite>Dr Sally Mortlock · UQ research team</cite></blockquote>
-    <p>A funding pathway could support development of the clinic-facing tool, testing in general practice and evaluation of whether earlier identification improves referral decisions and patient experience. The psychological benefit should be measured rather than assumed.</p>
-  </div>
-  <div class="reveal">
-    <div class="safe-box">
-      <h3>What needs to happen next?</h3>
-      <div class="accordion">
-        <div class="acc-item"><button class="acc-button" type="button" aria-expanded="false" aria-controls="fund-a"><span>1. Fund development</span><span>+</span></button><div class="acc-content" id="fund-a" hidden><p>Translate the published model into a clinic-facing tool with input from patients and clinicians.</p></div></div>
-        <div class="acc-item"><button class="acc-button" type="button" aria-expanded="false" aria-controls="fund-b"><span>2. Test it in practice</span><span>+</span></button><div class="acc-content" id="fund-b" hidden><p>Evaluate whether the tool can support GPs to recognise symptoms, decide on follow-up and refer people appropriately. Test usability and performance before wider implementation.</p></div></div>
-        <div class="acc-item"><button class="acc-button" type="button" aria-expanded="false" aria-controls="fund-c"><span>3. Improve awareness</span><span>+</span></button><div class="acc-content" id="fund-c" hidden><p>Help young people, families and health professionals understand which symptoms warrant medical attention, while ensuring people can access appropriate care and support.</p></div></div>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<section class="closing" id="circle-back"><div class="closing-inner">
-  
-  <h2>Earlier recognition needs more than a research paper.</h2>
-  <p>For Smith, diagnosis changed how she understood years of pain. Looking back, she said greater awareness could have helped her recognise earlier that what she was experiencing was not something she simply had to tolerate.</p>
-  <blockquote class="quote">“Just because something is common doesn’t mean it’s normal.”<cite>Evie Smith</cite></blockquote>
-  <p>That message needs to reach beyond individual patients. Young people need clear information about symptoms that warrant medical attention, and healthcare professionals need tools and support to respond when those symptoms are raised.</p>
-  <p>Funding is the immediate next step for the SAFE research team: to develop the tool, test it in clinical settings and establish whether it can help people reach appropriate care sooner. Alongside that work, greater awareness can help prevent concerning symptoms from being normalised or ignored.</p>
-  <blockquote class="quote">“What they're experiencing is a real issue. It's not just in their head. It's not just imaginary.”<cite>Dr Sally Mortlock · UQ research team</cite></blockquote>
-  <p>The SAFE score has not yet been shown to ease the psychological effects of diagnostic uncertainty. Funding its next stages would allow researchers to test whether earlier recognition can make a difference — while awareness can help ensure young people know their pain deserves to be taken seriously.</p>
-</div></section>
+<section class="section closing-section" id="wait-continues">
+  <h2>The wait continues</h2>
+  <p>For Smith, an earlier explanation might have changed how she understood her symptoms as a teenager.</p>
+  <p>Her diagnosis eventually provided an explanation and access to university support.</p>
+  <p>But the experiences of Johnston, Cusack and Webb show that the path towards answers is different for everyone.</p>
+  <p>Some people discover possible explanations through conversations with friends, while others spend years trying to find effective treatment or remain unsure whether further investigation is worthwhile.</p>
+  <p>A screening tool cannot remove every barrier to diagnosis or guarantee that someone's symptoms will be explained.</p>
+  <p>But SAFE could offer clinicians another way to recognise patterns of symptoms earlier and prompt the next step in the diagnostic process.</p>
+  <p>For women waiting for answers, that possibility matters because the wait is not simply time spent without a diagnosis.</p>
+  <p>It can also mean questioning whether their experiences are normal, whether their pain deserves attention and how to explain something they still do not fully understand.</p>
+  <p>Smith's experience offers a reminder of what an answer can mean after years of uncertainty.</p>
+  <blockquote class="quote">“Just because something is common doesn’t mean it’s normal,” she said.</blockquote>
+</section>
 </main>
-<section class="sources" id="sources"><div class="sources-inner"><h2>Sources and methodology</h2><p class="source-note">The feature combines interviews with lived-experience and clinical sources with published Australian research. Study findings are described in the context of the specific samples and methods used.</p><ul class="source-list">
-<li>Mishra, G. D., Baneshi, M. R., Mortlock, S., Montgomery, G. W., Doust, J., Dobson, A. J., &amp; Abbott, J. (2026). “Development of an early prediction model for endometriosis risk: the simplified adolescent factors for endometriosis (SAFE) score.” <em>eClinicalMedicine, 93</em>, 103806. <a href="https://pubmed.ncbi.nlm.nih.gov/41938839/" target="_blank" rel="noopener">Read the study</a>.</li>
-<li>Mosterd, D., Mikocka-Walus, A., Van Niekerk, L., Skvarc, D., &amp; Evans, S. (2026). “Comparing psychological distress, health-related quality of life and pain in individuals diagnosed with endometriosis and suspected to have endometriosis: A cross-sectional analysis.” <em>Journal of Psychosomatic Research, 206</em>, 112647. <a href="https://pubmed.ncbi.nlm.nih.gov/41905339/" target="_blank" rel="noopener">Read the study</a>.</li>
-<li>Mazza, D., Thapaliya, K., Crawford, S. B., Hui, A., Moradi, M., &amp; Grzeskowiak, L. E. (2025). “The clinical presentation, investigation, and management of women diagnosed with endometriosis in Australian general practices, 2011–2021: an open cohort study.” <em>Medical Journal of Australia, 223</em>(11), 586–592. <a href="https://www.mja.com.au/journal/2025/223/11/clinical-presentation-investigation-and-management-women-diagnosed" target="_blank" rel="noopener">Read the study</a>.</li>
-<li>Mosterd, D., Evans, S., Van Niekerk, L., Skvarc, D., Leonardi, M., Stanley, K., &amp; Mikocka-Walus, A. (2025). “‘A name to the pain’: A mixed methods analysis of diagnostic delay and perceptions of diagnosis importance in Australians with endometriosis.” <em>Journal of Psychosomatic Research</em>. <a href="https://www.sciencedirect.com/science/article/pii/S0022399925001072" target="_blank" rel="noopener">Read the study</a>.</li>
-<li>Endometriosis Australia (2023). “Endometriosis Australia Welcomes Queensland Health Funding.” <a href="https://endometriosisaustralia.org/endometriosis-australia-welcomes-queensland-health-funding/" target="_blank" rel="noopener">Read the source</a>.</li>
-<li>Interviews: Evie Smith, Dr Melinda Heywood and Dr Sally Mortlock, plus Charlee Webb. Direct quotations should be checked against the interview transcripts and publication permissions confirmed.</li>
-</ul><p class="source-note"><strong>Method note:</strong> The psychological study was a cross-sectional online survey of 550 people reporting a confirmed diagnosis and 103 who suspected they had endometriosis, recruited through Australian endometriosis organisations. Its findings show an association between diagnostic status and reported symptoms; they do not establish causation. The SAFE score is a risk-prediction model, not a diagnostic test, and the research team has described further development as necessary before routine GP use.</p><p class="source-note"><strong>Production note:</strong> Confirm the image locations, rights and credits, and check all direct quotations against the interview transcripts before publication.</p></div></section>
 <script>
 const progress=document.getElementById('progress');
 const pathwaySpace=document.getElementById('pathway-scroll-space');
