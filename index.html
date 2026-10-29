@@ -956,6 +956,18 @@ figcaption:not(.research-cover-copy) {
   padding-bottom: 96px;
 }
 
+
+/* Visually separate the diagnosis section from neighbouring story sections */
+.diagnosis-band {
+  background: #f0f6f8;
+  border-top: 5px solid var(--teal);
+  border-bottom: 1px solid var(--line);
+}
+.diagnosis-band .diagnosis-section {
+  padding-top: 82px;
+  padding-bottom: 92px;
+}
+
 </style>
 </head>
 <body>
@@ -1032,7 +1044,7 @@ figcaption:not(.research-cover-copy) {
           <button class="timeline-node" type="button" aria-pressed="false" data-kicker="GP visit" data-title="A person seeks help from a GP" data-copy="After her symptoms continued, Smith's mother took her to a GP. Hormonal contraception was the first line of treatment." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith">
             <span class="timeline-date">GP</span><span class="node-dot">02</span><span class="node-title">Help from a GP</span>
           </button>
-          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Symptoms may be managed while further investigation is considered" data-copy="During high school, Smith tried different hormonal contraceptives, but her symptoms continued." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith">
+          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Symptoms may be managed while further investigation is considered" data-copy="During high school, Smith tried different hormonal contraceptives, but her symptoms continued." data-quote="I tried different pills. Some of them worked really well and I just wouldn't even get a period. Some of them were bad and I would bleed for a couple weeks." data-credit="Evie Smith">
             <span class="timeline-date">High school</span><span class="node-dot">03</span><span class="node-title">Symptoms managed</span>
           </button>
           <button class="timeline-node" type="button" aria-pressed="false" data-kicker="April 2025" data-title="Referral, specialist assessment or imaging may follow" data-copy="After debilitating pain during a holiday in April 2025, Smith decided to pursue further investigation." data-quote="I just didn't want to live like that anymore." data-credit="Evie Smith">
@@ -1123,7 +1135,8 @@ figcaption:not(.research-cover-copy) {
   </div>
 </section>
 
-<section class="section diagnosis-section" id="diagnosis">
+<section class="diagnosis-band" id="diagnosis">
+  <div class="section diagnosis-section">
   <h2>What a diagnosis can change</h2>
   <p>Brisbane gynaecologist Dr Melinda Heywood said the experience of seeking a diagnosis could be shaped by how women's pain is understood and treated.</p>
   <figure class="story-image melinda-image">
@@ -1143,6 +1156,7 @@ figcaption:not(.research-cover-copy) {
   <p>The time, money, and effort involved in seeking a diagnosis have also influenced her decision to wait while her symptoms remain manageable.</p>
   <p>Her experience shows how uncertainty can influence decisions about healthcare when someone is unsure whether their symptoms are serious enough to investigate.</p>
   <p>It also raises the question of whether earlier recognition could help prompt further assessment.</p>
+  </div>
 </section>
 
 <section class="section safe-section" id="safe">
