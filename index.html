@@ -765,6 +765,12 @@ h1,h2,h3,h4{color:#12334b}
 }
 @media(prefers-reduced-motion:reduce){.dot-section .person-mark{transition:none}.pathway-track{transition:none}}
 
+
+/* Directional comparison only; no unsupported numerical scale is implied. */
+.group-trend{display:grid;place-items:center;min-height:30px;font:500 1.4rem/1 var(--sans);color:#9ab5c8}
+.group-trend.upward{font-size:2rem;font-weight:700;color:#2f6892}
+@media(max-width:760px){.group-trend.upward{font-size:1.6rem}}
+
 </style>
 </head>
 <body>
@@ -899,7 +905,7 @@ h1,h2,h3,h4{color:#12334b}
   <h2>The research behind the uncertainty</h2>
   <figure class="story-image research-image">
     <img src="photo%205.png" alt="Image accompanying the psychological research" loading="lazy">
-    <figcaption>New research shows that diagnostic delay leads to increased anxiety and depression</figcaption>
+    <figcaption>New research finds higher anxiety symptoms and pelvic pain among women with suspected endometriosis</figcaption>
   </figure>
   <p>A study published in the <em>Journal of Psychosomatic Research</em> in July 2026 examined psychological distress, health-related quality of life and pain among Australians with confirmed or suspected endometriosis.</p>
   <p>Researchers surveyed 653 participants, including 550 with a confirmed diagnosis and 103 who suspected they had the condition.</p>
@@ -911,13 +917,13 @@ h1,h2,h3,h4{color:#12334b}
     </div>
     <div class="research-compare-row">
       <strong>Anxiety symptoms</strong>
-      <span class="group-mark diagnosed" aria-hidden="true"><i></i></span>
-      <span class="group-mark suspected" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="group-trend neutral" aria-hidden="true">—</span>
+      <span class="group-trend upward" aria-hidden="true">↑</span>
     </div>
     <div class="research-compare-row">
       <strong>Pelvic pain symptoms</strong>
-      <span class="group-mark diagnosed" aria-hidden="true"><i></i></span>
-      <span class="group-mark suspected" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="group-trend neutral" aria-hidden="true">—</span>
+      <span class="group-trend upward" aria-hidden="true">↑</span>
     </div>
   </div>
   <p>The findings draw attention to the experiences of women who are living with symptoms but have not yet received a confirmed diagnosis.</p>
