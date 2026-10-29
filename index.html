@@ -771,6 +771,170 @@ h1,h2,h3,h4{color:#12334b}
 .group-trend.upward{font-size:2rem;font-weight:700;color:#2f6892}
 @media(max-width:760px){.group-trend.upward{font-size:1.6rem}}
 
+
+/* Refined visual treatment for the requested timeline, research image, and inline portraits */
+:root{
+  --navy:#12334b;--blue:#3f78a0;--sky:#dcecf6;--pale:#f2f8fc;
+  --teal:#4e87ad;--pink:#bed9eb;--pink-pale:#edf5fa;
+  --ink:#16364d;--muted:#587184;--line:#cbdfea;--white:#fff;
+}
+body{background:#fff;color:#16364d}
+.progress{background:#79afd0}
+.timeline-section{
+  width:100%;max-width:none;margin:0;padding:clamp(54px,7vw,84px) 0 65px;
+  background:#eaf4fa;color:#16364d;overflow:hidden;
+}
+.timeline-inner{max-width:1120px;margin:0 auto;padding:0 24px}
+.timeline-section h2{
+  font:500 clamp(2.6rem,5vw,4rem)/1.05 var(--serif);letter-spacing:-.035em;
+  color:#12334b;margin:0 0 19px
+}
+.timeline-stat-copy{max-width:880px;margin:0 0 38px;font:1.08rem/1.65 var(--serif);color:#355970}
+.timeline-stat-number{display:inline-block;color:#174f75;font:700 clamp(1.25rem,2.5vw,1.75rem)/1.1 var(--sans);white-space:nowrap}
+.pathway-scroll-space{height:155svh;height:155dvh;position:relative;margin:0}
+.pathway-viewport{
+  position:sticky;top:0;height:100svh;height:100dvh;width:100%;
+  display:flex;flex-direction:column;justify-content:flex-start;gap:0;
+  overflow:hidden;padding:clamp(70px,10vh,110px) 0 0;
+}
+.pathway-track{display:flex;align-items:flex-start;gap:0;width:max-content;min-width:100%;padding:0 12vw 26px;position:relative;will-change:transform}
+.pathway-track:before{content:"";position:absolute;top:30px;left:calc(12vw + 27px);right:calc(12vw + 25px);height:2px;background:#93bbd5;z-index:0}
+.timeline-node{
+  position:relative;z-index:1;flex:0 0 clamp(180px,22vw,230px);display:flex;
+  flex-direction:column;align-items:flex-start;gap:11px;padding:0 17px 15px 0;
+  margin:0;background:transparent;border:0;text-align:left;color:#16364d;cursor:pointer
+}
+.timeline-date{font:700 .77rem/1.25 var(--sans);color:#4a7898;min-height:20px}
+.node-dot{z-index:1;width:58px;height:58px;display:grid;place-items:center;border:2px solid #6fa1c2;border-radius:50%;background:#fff;color:#2f6892;font:700 .8rem var(--sans);box-shadow:0 0 0 6px #eaf4fa}
+.timeline-node.is-active .node-dot{background:#285f83;border-color:#285f83;color:#fff;box-shadow:0 0 0 6px #d4e8f4}
+.timeline-node .node-title{max-width:190px;font:500 1.15rem/1.28 var(--serif);color:#173d57}
+.timeline-node.is-active .node-title{color:#245f86}
+.timeline-detail-card{
+  position:absolute;left:24px;right:24px;bottom:clamp(34px,8vh,76px);
+  max-width:960px;margin:0 auto;padding:clamp(20px,3vw,32px);
+  background:rgba(255,255,255,.95);border:1px solid #c6dce9;border-left:4px solid #4e87ad;
+  box-shadow:0 16px 38px rgba(19,61,86,.07)
+}
+.timeline-detail-top{font:700 .8rem/1.3 var(--sans);color:#2f6892}
+.timeline-detail-card h3{font:500 clamp(1.35rem,2.7vw,2rem)/1.2 var(--serif);color:#12334b;margin:12px 0}
+.timeline-detail-card p{max-width:750px;margin-bottom:6px}
+.timeline-detail-card .timeline-quote{font:clamp(1.2rem,2.2vw,1.65rem)/1.4 var(--serif);color:#316b92;border-left:2px solid #8ebdda;padding-left:18px;margin:16px 0 8px}
+.timeline-credit{font-size:.78rem!important;color:#587184;margin:0}
+.timeline-afterword{max-width:880px;margin:10px auto 0;padding:0 24px;color:#274d67}
+.timeline-afterword p{font-size:1rem;max-width:72ch}
+.lived-experience{display:flow-root}
+.lived-experience .sophie-image{float:right;width:min(37%,330px);margin:8px 0 22px 32px}
+.lived-experience .sophie-image img{width:100%;height:auto;max-height:470px;object-fit:cover}
+.research-cover-scroll{height:155svh;height:155dvh;position:relative;background:#0c2638}
+.research-cover{
+  position:sticky;top:0;height:100svh;height:100dvh;overflow:hidden;margin:0;
+  background:#0c2638;isolation:isolate
+}
+.research-cover:after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(7,27,42,.87) 0%,rgba(7,27,42,.42) 42%,rgba(7,27,42,.05) 100%)
+}
+.research-cover img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
+  transform:scale(1);will-change:transform
+}
+.research-cover-copy{
+  position:absolute;z-index:2;left:clamp(22px,8vw,115px);right:clamp(22px,8vw,115px);
+  bottom:clamp(50px,11vh,125px);max-width:880px;margin:0;padding:0;
+  color:#fff;opacity:0;transform:translateY(22px);will-change:transform,opacity
+}
+.research-cover-copy h2{
+  max-width:850px;margin:0 0 18px;color:#fff;
+  font:500 clamp(2.6rem,6vw,5.5rem)/1.03 var(--serif);letter-spacing:-.04em
+}
+.research-cover-copy p{
+  max-width:690px;margin:0;color:#e7f3fa;
+  font:500 clamp(1.1rem,2.2vw,1.55rem)/1.45 var(--sans)
+}
+.research-body{padding-top:75px;padding-bottom:90px}
+.research-body>p{max-width:76ch}
+.chart-wrap{clear:both;margin:48px 0 46px;padding:clamp(20px,4vw,36px);background:#f1f7fb;border:1px solid #d2e3ed}
+.chart-heading{font:500 clamp(1.45rem,2.7vw,2rem)/1.2 var(--serif);color:#12334b;margin:0 0 10px}
+.chart-subcopy{font-size:.84rem!important;color:#587184;margin:0 0 22px;max-width:760px}
+.chart-legend{display:flex;gap:16px;flex-wrap:wrap;margin:15px 0 21px;font-size:.78rem;color:#587184}
+.chart-legend span{display:inline-flex;align-items:center;gap:8px}
+.legend-swatch{display:inline-block;width:10px;height:10px;border-radius:2px;background:#2f6892}
+.legend-swatch.psych{background:#9ac6e1}
+.vertical-chart{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:9px;align-items:end;padding:15px 0 0;border-bottom:1px solid #b8d2e2}
+.vcol{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;min-width:0;text-align:center}
+.vcol-value{font-size:.73rem;font-weight:700;color:#225b81;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.vbar-track{height:165px;width:100%;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(to top,#e0edf5 1px,transparent 1px);background-size:100% 25%;border-top:1px dashed #bfd5e4;border-radius:2px 2px 0 0;overflow:hidden}
+.vbar{width:min(62%,48px);height:0;background:linear-gradient(180deg,#79afd0,#2f6892);border-radius:3px 3px 0 0;transition:height 1.1s cubic-bezier(.2,.7,.2,1)}
+.psych-col .vcol-value{color:#245f86}
+.psych-col .vbar{background:linear-gradient(180deg,#c4e0f0,#80b6d5)}
+.vcol-label{display:block;min-height:48px;padding:9px 2px 10px;font-size:.68rem;line-height:1.25;color:#3f6076;overflow-wrap:anywhere}
+.source-caption{font-size:.72rem!important;line-height:1.5;color:#587184;margin:20px 0 0;max-width:100ch}
+.inline-photo{width:min(34%,285px);margin:8px 0 22px 30px}
+.inline-photo img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.research-inline-photo{float:right}
+.safe-inline-photo{float:right;margin-top:12px}
+.diagnosis-section{display:flow-root}
+.diagnosis-section .melinda-image{float:right;width:min(25%,225px);margin:8px 0 22px 28px}
+.diagnosis-section .melinda-image img{width:100%;height:auto;max-height:340px;object-fit:cover;object-position:center top}
+.diagnosis-section .melinda-image figcaption{font:.76rem/1.45 var(--sans);color:#587184;margin-top:8px}
+.diagnosis-section>p,.diagnosis-section>blockquote{max-width:76ch}
+.closing-section{display:flow-root}
+.closing-inline-photo{float:left;margin:8px 30px 22px 0}
+.safe-question-list{margin:32px 0 42px;display:grid;gap:14px}
+.safe-question{min-height:155px;display:grid;grid-template-columns:34px 58px minmax(0,1fr);align-items:center;gap:16px;padding:22px clamp(16px,3vw,32px);background:#f1f7fb;border:1px solid #d0e1ec;scroll-margin-top:10vh}
+.safe-question.visible{opacity:1;transform:translateY(0)}
+.safe-number{font:700 1rem var(--sans);color:#3f78a0}
+.safe-question-icon{width:55px;height:55px;display:grid;place-items:center;border-radius:50%;background:#dcecf6}
+.safe-question-icon svg{width:35px;height:35px;fill:none;stroke:#376f91;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.safe-question p{margin:0;font:500 clamp(1.2rem,2.2vw,1.7rem)/1.3 var(--serif);color:#12334b}
+@media(max-width:760px){
+  .timeline-inner{padding:0 19px}
+  .timeline-section{padding-top:54px}
+  .timeline-stat-copy{font-size:1rem;margin-bottom:25px}
+  .pathway-scroll-space{height:145svh;height:145dvh}
+  .pathway-viewport{padding-top:50px}
+  .pathway-track{padding:0 8vw 20px}
+  .pathway-track:before{left:calc(8vw + 27px);right:calc(8vw + 25px)}
+  .timeline-node{flex-basis:175px}
+  .node-dot{width:52px;height:52px}
+  .timeline-node .node-title{font-size:1rem}
+  .timeline-detail-card{left:17px;right:17px;bottom:24px;padding:17px}
+  .timeline-detail-card h3{font-size:1.35rem}
+  .timeline-detail-card .timeline-quote{font-size:1.12rem}
+  .timeline-afterword{padding:0 19px}
+  .lived-experience .sophie-image{float:right;width:min(44%,235px);margin:6px 0 16px 18px}
+  .research-cover-scroll{height:140svh;height:140dvh}
+  .research-cover-copy{left:23px;right:23px;bottom:55px}
+  .research-cover-copy h2{font-size:clamp(2.3rem,8vw,3.7rem)}
+  .research-cover-copy p{font-size:1.05rem}
+  .research-body{padding-top:52px;padding-bottom:60px}
+  .chart-wrap{padding:17px 12px;margin:35px 0}
+  .vertical-chart{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+  .vbar-track{height:125px}
+  .vcol-label{min-height:39px;font-size:.68rem}
+  .inline-photo{width:min(42%,230px);margin-left:18px}
+  .diagnosis-section .melinda-image{width:min(33%,180px);margin-left:20px}
+  .safe-question{grid-template-columns:26px 45px minmax(0,1fr);gap:11px;padding:18px 13px;min-height:135px}
+  .safe-question-icon{width:44px;height:44px}
+  .safe-question-icon svg{width:29px;height:29px}
+  .safe-question p{font-size:1.13rem}
+}
+@media(max-width:480px){
+  .lived-experience .sophie-image{width:42%;margin-left:14px}
+  .diagnosis-section .melinda-image{width:min(43%,165px);margin-left:16px}
+  .inline-photo{width:42%;margin-left:15px}
+  .research-inline-photo,.safe-inline-photo,.closing-inline-photo{float:right}
+  .closing-inline-photo{float:left;margin-right:15px}
+  .vertical-chart{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .vbar-track{height:110px}
+  .vcol-label{font-size:.73rem}
+  .timeline-date{font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .research-cover img,.research-cover-copy{transition:none!important}
+  .vbar{transition:none}
+}
+
 </style>
 </head>
 <body>
@@ -833,66 +997,55 @@ h1,h2,h3,h4{color:#12334b}
   </div>
 </section>
 
-<section class="section timeline-section" id="journey">
-  <h2>Diagnostic Timeline</h2>
-  <p class="timeline-stat-copy">Every diagnosis looks different. The average diagnostic length in Australia is <strong class="timeline-stat-number">6–8 years</strong> according to Endometriosis Australia. However, a study by the <em>Journal of Psychosomatic Research</em> in June last year found that Australian diagnostic delay was <strong class="timeline-stat-number">12.3 years</strong> long.</p>
+<section class="timeline-section" id="journey">
+  <div class="timeline-inner">
+    <h2>Diagnostic Timeline</h2>
+    <p class="timeline-stat-copy">Every diagnosis looks different. The average diagnostic length in Australia is <strong class="timeline-stat-number">6–8 years</strong> according to Endometriosis Australia. However, a study by the <em>Journal of Psychosomatic Research</em> in June last year found that Australian diagnostic delay was <strong class="timeline-stat-number">12.3 years</strong> long.</p>
 
-  <h3 class="track-heading">Track one: The wider diagnostic pathway</h3>
-  <div class="pathway-scroll-space" id="pathway-scroll-space">
-    <div class="pathway-viewport" id="pathway-viewport" aria-label="The diagnostic pathway moves as the reader scrolls">
-      <div class="pathway-track" id="pathway-track">
-        <article class="pathway-stage">
-          <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="8" width="34" height="33" rx="4"/><path d="M15 4v9M33 4v9M8 18h32M17 25h5M27 25h5M17 32h5"/></svg></span>
-          <h4>Symptoms begin.</h4>
-        </article>
-        <article class="pathway-stage">
-          <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="16" r="8"/><path d="M7 40c1-9 7-14 14-14s13 5 14 14M35 8v13M29 14h12"/></svg></span>
-          <h4>A person seeks help from a GP.</h4>
-        </article>
-        <article class="pathway-stage">
-          <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="5" width="30" height="38" rx="3"/><path d="M16 15h16M16 23h16M16 31h10M29 34l3 3 6-8"/></svg></span>
-          <h4>Symptoms may be managed while further investigation is considered.</h4>
-        </article>
-        <article class="pathway-stage">
-          <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 7h22l8 8v27H9zM31 7v9h8M15 23h17M15 30h17M15 37h11"/></svg></span>
-          <h4>Referral, specialist assessment or imaging may follow.</h4>
-        </article>
-        <article class="pathway-stage">
-          <span class="pathway-visual" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m15 24 6 6 13-14"/></svg></span>
-          <h4>A diagnosis may eventually be established.</h4>
-        </article>
+    <div class="pathway-scroll-space" id="pathway-scroll-space">
+      <div class="pathway-viewport" id="pathway-viewport" aria-label="Diagnostic timeline">
+        <div class="pathway-track" id="pathway-track">
+          <button class="timeline-node is-active" type="button" aria-pressed="true" data-kicker="Age 12" data-title="Symptoms begin" data-copy="Severe period pain began with Smith's first period at 12." data-quote="I guess this is what everyone is dealing with." data-credit="Evie Smith">
+            <span class="timeline-date">Age 12</span><span class="node-dot">01</span><span class="node-title">Symptoms begin</span>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="GP visit" data-title="A person seeks help from a GP" data-copy="After her symptoms continued, Smith's mother took her to a GP. Hormonal contraception was the first line of treatment." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith">
+            <span class="timeline-date">GP</span><span class="node-dot">02</span><span class="node-title">Help from a GP</span>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Symptoms may be managed while further investigation is considered" data-copy="During high school, Smith tried different hormonal contraceptives, but her symptoms continued." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith">
+            <span class="timeline-date">High school</span><span class="node-dot">03</span><span class="node-title">Symptoms managed</span>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="April 2025" data-title="Referral, specialist assessment or imaging may follow" data-copy="After debilitating pain during a holiday in April 2025, Smith decided to pursue further investigation." data-quote="I just didn't want to live like that anymore." data-credit="Evie Smith">
+            <span class="timeline-date">April 2025</span><span class="node-dot">04</span><span class="node-title">Further investigation</span>
+          </button>
+          <button class="timeline-node" type="button" aria-pressed="false" data-kicker="September 2025" data-title="A diagnosis may eventually be established" data-copy="Surgery in September 2025 confirmed endometriosis." data-quote="You’re so scared that they’re going to go in and find nothing and all your answers will just be nothingness." data-credit="Evie Smith">
+            <span class="timeline-date">September 2025</span><span class="node-dot">05</span><span class="node-title">Diagnosis</span>
+          </button>
+        </div>
+        <div class="timeline-detail-card" aria-live="polite">
+          <div class="timeline-detail-top"><span id="timeline-kicker">Age 12</span></div>
+          <h3 id="timeline-title">Symptoms begin</h3>
+          <p id="timeline-copy">Severe period pain began with Smith's first period at 12.</p>
+          <blockquote class="timeline-quote" id="timeline-quote">“I guess this is what everyone is dealing with.”</blockquote>
+          <p class="timeline-credit" id="timeline-credit">Evie Smith</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <h3 class="track-heading">Track two: Evie's experience</h3>
-  <div class="timeline-scroller" id="timeline-scroller" tabindex="0" role="region" aria-label="Evie's diagnostic timeline. Select each milestone to see her experience.">
-    <div class="timeline-track">
-      <button class="timeline-node is-active" type="button" aria-pressed="true" data-kicker="Age 12" data-title="Severe pain begins with her first period" data-copy="Smith said she had experienced severe period pain since her first period at 12." data-quote="I guess this is what everyone is dealing with." data-credit="Evie Smith"><span class="node-dot">12</span><span class="node-title">Age 12</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="High school" data-title="Different hormonal contraceptives are tried; symptoms continue" data-copy="During high school, Smith tried different hormonal contraceptives, but her symptoms continued." data-quote="Well, this is kind of like it is what it is." data-credit="Evie Smith"><span class="node-dot">HS</span><span class="node-title">High school</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="April 2025" data-title="Debilitating pain prompts her to seek further help" data-copy="After debilitating pain during a holiday in April 2025, Smith decided to pursue further investigation." data-quote="I just didn't want to live like that anymore." data-credit="Evie Smith"><span class="node-dot">2025</span><span class="node-title">April 2025</span></button>
-      <button class="timeline-node" type="button" aria-pressed="false" data-kicker="September 2025" data-title="Surgery confirms endometriosis" data-copy="Surgery in September 2025 confirmed endometriosis." data-quote="You’re so scared that they’re going to go in and find nothing and all your answers will just be nothingness." data-credit="Evie Smith"><span class="node-dot">Dx</span><span class="node-title">September 2025</span></button>
+    <div class="timeline-afterword">
+      <p>For Smith, finally receiving an explanation changed how she understood years of pain.</p>
+      <p>But for other women, the uncertainty continues.</p>
+      <p>Sometimes that uncertainty begins because they do not recognise their symptoms as something that warrants investigation.</p>
     </div>
   </div>
-  <div class="timeline-detail-card" aria-live="polite">
-    <div class="timeline-detail-top"><span id="timeline-kicker">Age 12</span></div>
-    <h3 id="timeline-title">Severe pain begins with her first period</h3>
-    <p id="timeline-copy">Smith said she had experienced severe period pain since her first period at 12.</p>
-    <blockquote class="timeline-quote" id="timeline-quote">“I guess this is what everyone is dealing with.”</blockquote>
-    <p class="timeline-credit" id="timeline-credit">Evie Smith</p>
-  </div>
-  <p class="timeline-afterword">For Smith, finally receiving an explanation changed how she understood years of pain.</p>
-  <p>But for other women, the uncertainty continues.</p>
-  <p>Sometimes that uncertainty begins because they do not recognise their symptoms as something that warrants investigation.</p>
 </section>
 
 <section class="section lived-experience" id="normal">
   <h2>When symptoms feel normal</h2>
+  <p>For 24-year-old Sophie Johnston, the uncertainty began with an assumption that her symptoms were simply part of having a period.</p>
   <figure class="story-image sophie-image">
     <img src="photo%2014.png" alt="Sophie Johnston" loading="lazy">
     <figcaption>Symptoms can go uninvestigated for years</figcaption>
   </figure>
-  <p>For 24-year-old Sophie Johnston, the uncertainty began with an assumption that her symptoms were simply part of having a period.</p>
   <p>She experienced irregular periods and severe cramping from her first period at 16, but did not initially question whether they were unusual.</p>
   <blockquote class="quote">“I always just thought it was normal and I never talked to anyone about it,” Johnston said.</blockquote>
   <p>A conversation with a colleague eventually introduced her to endometriosis as a possible explanation for her symptoms.</p>
@@ -901,45 +1054,61 @@ h1,h2,h3,h4{color:#12334b}
   <p>If symptoms seem normal, there may be little reason to look for an explanation.</p>
 </section>
 
-<section class="section research-section" id="research">
-  <h2>The research behind the uncertainty</h2>
-  <figure class="story-image research-image">
-    <img src="photo%205.png" alt="Image accompanying the psychological research" loading="lazy">
-    <figcaption>New research finds higher anxiety symptoms and pelvic pain among women with suspected endometriosis</figcaption>
-  </figure>
-  <p>A study published in the <em>Journal of Psychosomatic Research</em> in July 2026 examined psychological distress, health-related quality of life and pain among Australians with confirmed or suspected endometriosis.</p>
-  <p>Researchers surveyed 653 participants, including 550 with a confirmed diagnosis and 103 who suspected they had the condition.</p>
-  <p>The suspected endometriosis group reported significantly greater anxiety and pelvic pain symptoms than the diagnosed group.</p>
-
-  <div class="research-graphic" role="img" aria-label="The suspected endometriosis group reported significantly greater anxiety and pelvic pain symptoms than the diagnosed group.">
-    <div class="research-group-head">
-      <span></span><span>Diagnosed group</span><span>Suspected group</span>
-    </div>
-    <div class="research-compare-row">
-      <strong>Anxiety symptoms</strong>
-      <span class="group-trend neutral" aria-hidden="true">—</span>
-      <span class="group-trend upward" aria-hidden="true">↑</span>
-    </div>
-    <div class="research-compare-row">
-      <strong>Pelvic pain symptoms</strong>
-      <span class="group-trend neutral" aria-hidden="true">—</span>
-      <span class="group-trend upward" aria-hidden="true">↑</span>
-    </div>
+<section class="research-feature" id="research">
+  <div class="research-cover-scroll" id="research-cover-scroll">
+    <figure class="research-cover">
+      <img src="photo%205.png" alt="Photograph accompanying the research story" loading="lazy">
+      <figcaption class="research-cover-copy" id="research-cover-copy">
+        <h2>The research behind the uncertainty</h2>
+        <p>New research finds higher anxiety symptoms and pelvic pain among women with suspected endometriosis</p>
+      </figcaption>
+    </figure>
   </div>
-  <p>The findings draw attention to the experiences of women who are living with symptoms but have not yet received a confirmed diagnosis.</p>
-  <p>For 21-year-old Laura Cusack, pain and exhaustion affected her schoolwork and everyday life.</p>
-  <p>Severe cramps sometimes left her spending two days a month in bed, while heavy bleeding contributed to low iron levels.</p>
-  <p>Although her mother had endometriosis and recognised a possible connection, finding a treatment that worked took time.</p>
-  <blockquote class="quote">“The biggest thing for me was just being so exhausted and just unsure,” Cusack said.</blockquote>
+
+  <div class="section research-body">
+    <p>A study published in the <em>Journal of Psychosomatic Research</em> in July 2026 examined psychological distress, health-related quality of life and pain among Australians with confirmed or suspected endometriosis.</p>
+    <p>Researchers surveyed 653 participants, including 550 with a confirmed diagnosis and 103 who suspected they had the condition.</p>
+    <p>The suspected endometriosis group reported significantly greater anxiety and pelvic pain symptoms than the diagnosed group.</p>
+
+    <div class="chart-wrap" id="symptom-chart" aria-label="Bar graph of symptoms recorded in Australian general-practice records before an endometriosis diagnosis and other conditions recorded in the cohort">
+      <h3 class="chart-heading">What GPs recorded around diagnosis</h3>
+      <p class="chart-subcopy">Share of women in the Australian GP cohort, 2011–2021. Dark-blue bars show symptoms documented before diagnosis; light-blue bars show depression and anxiety recorded as other conditions.</p>
+      <div class="chart-legend"><span><i class="legend-swatch"></i>Symptoms before diagnosis</span><span><i class="legend-swatch psych"></i>Other recorded conditions</span></div>
+      <div class="vertical-chart symptoms-chart psych-chart">
+        <div class="vcol" data-value="40.8"><span class="vcol-value">40.8%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Pelvic<br>pain</span></div>
+        <div class="vcol" data-value="22.1"><span class="vcol-value">22.1%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Painful<br>periods</span></div>
+        <div class="vcol" data-value="19.3"><span class="vcol-value">19.3%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Fatigue</span></div>
+        <div class="vcol" data-value="15"><span class="vcol-value">15.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Heavy<br>bleeding</span></div>
+        <div class="vcol" data-value="12.5"><span class="vcol-value">12.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Altered<br>bleeding</span></div>
+        <div class="vcol" data-value="11.5"><span class="vcol-value">11.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Bowel<br>symptoms</span></div>
+        <div class="vcol" data-value="8"><span class="vcol-value">8.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Infertility</span></div>
+        <div class="vcol" data-value="5.7"><span class="vcol-value">5.7%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Pain during<br>sex</span></div>
+        <div class="vcol" data-value="4.5"><span class="vcol-value">4.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Painful<br>urination</span></div>
+        <div class="vcol psych-col" data-value="24"><span class="vcol-value">24.0%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Depression*</span></div>
+        <div class="vcol psych-col" data-value="22.5"><span class="vcol-value">22.5%</span><div class="vbar-track"><div class="vbar"></div></div><span class="vcol-label">Anxiety*</span></div>
+      </div>
+      <p class="source-caption">Source: Mazza et al. (2025), <a href="https://www.mja.com.au/journal/2025/223/11/clinical-presentation-investigation-and-management-women-diagnosed" target="_blank" rel="noopener">Medical Journal of Australia</a>, Boxes 2–3. *Depression and anxiety were recorded as other conditions in the cohort; they are not part of the pre-diagnosis symptom list. This chart does not demonstrate that diagnosis caused or prevented psychological distress.</p>
+    </div>
+
+    <p>The findings draw attention to the experiences of women who are living with symptoms but have not yet received a confirmed diagnosis.</p>
+    <figure class="inline-photo research-inline-photo">
+      <img src="photo%207.png" alt="Photograph accompanying the story" loading="lazy">
+    </figure>
+    <p>For 21-year-old Laura Cusack, pain and exhaustion affected her schoolwork and everyday life.</p>
+    <p>Severe cramps sometimes left her spending two days a month in bed, while heavy bleeding contributed to low iron levels.</p>
+    <p>Although her mother had endometriosis and recognised a possible connection, finding a treatment that worked took time.</p>
+    <blockquote class="quote">“The biggest thing for me was just being so exhausted and just unsure,” Cusack said.</blockquote>
+    <div class="float-clear" aria-hidden="true"></div>
+  </div>
 </section>
 
 <section class="section diagnosis-section" id="diagnosis">
   <h2>What a diagnosis can change</h2>
+  <p>Brisbane gynaecologist Dr Melinda Heywood said the experience of seeking a diagnosis could be shaped by how women's pain is understood and treated.</p>
   <figure class="story-image melinda-image">
-    <img src="melinda-heywood.jpg" alt="Dr Melinda Heywood" loading="lazy">
+    <img src="photo.png" alt="Dr Melinda Heywood" loading="lazy">
     <figcaption>Diagnosis provides important relief from uncertainty</figcaption>
   </figure>
-  <p>Brisbane gynaecologist Dr Melinda Heywood said the experience of seeking a diagnosis could be shaped by how women's pain is understood and treated.</p>
   <blockquote class="quote">“Women’s symptoms can be written off as anxiety or hysteria,” she said.</blockquote>
   <blockquote class="quote">“Repeatedly being told that symptoms are normal can leave patients questioning their own experiences.”</blockquote>
   <p>Some arrive at specialist appointments feeling they must fight to have their concerns investigated.</p>
@@ -959,40 +1128,19 @@ h1,h2,h3,h4{color:#12334b}
   <h2>Could earlier recognition help?</h2>
   <p>For Dr Sally Mortlock, a member of the UQ research team behind the SAFE score, one challenge is recognising symptoms early enough to prompt investigation.</p>
   <blockquote class="quote">“Our goal with the SAFE score was to try and address that lag between the first experience of symptoms and then the actual diagnosis,” she said.</blockquote>
+  <figure class="inline-photo safe-inline-photo">
+    <img src="photo%2011.png" alt="Photograph accompanying the story" loading="lazy">
+  </figure>
   <p>The SAFE score was developed using data from more than 9,000 women in the Australian Longitudinal Study on Women's Health.</p>
   <p>Researchers examined symptoms experienced across adolescence and adulthood and identified six factors associated with a later endometriosis diagnosis.</p>
 
   <div class="safe-question-list" aria-label="Six SAFE questions">
-    <article class="safe-question reveal">
-      <span class="safe-number">1</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 25c5-9 9 9 14 0s9 9 14 0 7 6 10 0"/></svg></span>
-      <p>Do you often experience pelvic pain?</p>
-    </article>
-    <article class="safe-question reveal">
-      <span class="safe-number">2</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 14v20M14 24h20"/></svg></span>
-      <p>Have you sought medical care for pelvic pain?</p>
-    </article>
-    <article class="safe-question reveal">
-      <span class="safe-number">3</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="rotate(-42 24 24)"><rect x="14" y="8" width="20" height="32" rx="10"/><path d="M14 24h20"/></g></svg></span>
-      <p>Have you taken medication for pelvic pain?</p>
-    </article>
-    <article class="safe-question reveal">
-      <span class="safe-number">4</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6C19 15 11 23 11 31a13 13 0 0 0 26 0C37 23 29 15 24 6Z"/></svg></span>
-      <p>Have you experienced heavy menstrual bleeding?</p>
-    </article>
-    <article class="safe-question reveal">
-      <span class="safe-number">5</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="11" width="30" height="28" rx="3"/><path d="M9 19h30M17 7v8M31 7v8"/></svg></span>
-      <p>Do you experience painful periods?</p>
-    </article>
-    <article class="safe-question reveal">
-      <span class="safe-number">6</span>
-      <span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="5"/><circle cx="12" cy="34" r="5"/><circle cx="36" cy="34" r="5"/><path d="M24 17v7M12 29v-5h24v5M12 24h24"/></svg></span>
-      <p>Is there a family history of endometriosis?</p>
-    </article>
+    <article class="safe-question reveal"><span class="safe-number">1</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 25c5-9 9 9 14 0s9 9 14 0 7 6 10 0"/></svg></span><p>Do you often experience pelvic pain?</p></article>
+    <article class="safe-question reveal"><span class="safe-number">2</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 14v20M14 24h20"/></svg></span><p>Have you sought medical care for pelvic pain?</p></article>
+    <article class="safe-question reveal"><span class="safe-number">3</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="rotate(-42 24 24)"><rect x="14" y="8" width="20" height="32" rx="10"/><path d="M14 24h20"/></g></svg></span><p>Have you taken medication for pelvic pain?</p></article>
+    <article class="safe-question reveal"><span class="safe-number">4</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6C19 15 11 23 11 31a13 13 0 0 0 26 0C37 23 29 15 24 6Z"/></svg></span><p>Have you experienced heavy menstrual bleeding?</p></article>
+    <article class="safe-question reveal"><span class="safe-number">5</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="11" width="30" height="28" rx="3"/><path d="M9 19h30M17 7v8M31 7v8"/></svg></span><p>Do you experience painful periods?</p></article>
+    <article class="safe-question reveal"><span class="safe-number">6</span><span class="safe-question-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="12" r="5"/><circle cx="12" cy="34" r="5"/><circle cx="36" cy="34" r="5"/><path d="M24 17v7M12 29v-5h24v5M12 24h24"/></svg></span><p>Is there a family history of endometriosis?</p></article>
   </div>
 
   <p>The researchers found that symptoms experienced during adolescence, particularly between the ages of 16 and 19, were especially useful in predicting a later diagnosis.</p>
@@ -1003,11 +1151,15 @@ h1,h2,h3,h4{color:#12334b}
   <blockquote class="quote">“We’re on the pathway where we’re trying to translate it into GP clinics but we’re looking for funding to do it”, Mortlock said.</blockquote>
   <p>The team is currently consulting consumer and clinician groups to determine how the tool should work in clinical settings.</p>
   <p>While SAFE could help identify people at increased risk, further work will be needed to establish how it performs in practice and whether earlier recognition changes the diagnostic journey.</p>
+  <div class="float-clear" aria-hidden="true"></div>
 </section>
 
 <section class="section closing-section" id="wait-continues">
   <h2>The wait continues</h2>
   <p>For Smith, an earlier explanation might have changed how she understood her symptoms as a teenager.</p>
+  <figure class="inline-photo closing-inline-photo">
+    <img src="photo%2011.png" alt="Photograph accompanying the story" loading="lazy">
+  </figure>
   <p>Her diagnosis eventually provided an explanation and access to university support.</p>
   <p>But the experiences of Johnston, Cusack and Webb show that the path towards answers is different for everyone.</p>
   <p>Some people discover possible explanations through conversations with friends, while others spend years trying to find effective treatment or remain unsure whether further investigation is worthwhile.</p>
@@ -1017,10 +1169,29 @@ h1,h2,h3,h4{color:#12334b}
   <p>It can also mean questioning whether their experiences are normal, whether their pain deserves attention and how to explain something they still do not fully understand.</p>
   <p>Smith's experience offers a reminder of what an answer can mean after years of uncertainty.</p>
   <blockquote class="quote">“Just because something is common doesn’t mean it’s normal,” she said.</blockquote>
+  <div class="float-clear" aria-hidden="true"></div>
 </section>
 </main>
 <script>
 const progress=document.getElementById('progress');
+function updateProgress(){
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  if(progress) progress.style.width=(max>0?window.scrollY/max*100:0)+'%';
+}
+window.addEventListener('scroll',updateProgress,{passive:true});
+window.addEventListener('resize',updateProgress);
+updateProgress();
+
+const peopleGrid=document.getElementById('people-grid');
+if(peopleGrid){
+  for(let i=0;i<442;i++){
+    const dot=document.createElement('span');
+    dot.className='person-mark';
+    dot.setAttribute('aria-hidden','true');
+    peopleGrid.appendChild(dot);
+  }
+}
+
 const pathwaySpace=document.getElementById('pathway-scroll-space');
 const pathwayViewport=document.getElementById('pathway-viewport');
 const pathwayTrack=document.getElementById('pathway-track');
@@ -1035,44 +1206,94 @@ function updatePathwayTrack(){
 window.addEventListener('scroll',updatePathwayTrack,{passive:true});
 window.addEventListener('resize',updatePathwayTrack);
 updatePathwayTrack();
-function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'}
-window.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
-document.querySelectorAll('.acc-button').forEach(button=>{
-  button.addEventListener('click',()=>{
-    const panel=document.getElementById(button.getAttribute('aria-controls'));
-    const expanded=button.getAttribute('aria-expanded')==='true';
-    button.setAttribute('aria-expanded',String(!expanded));panel.hidden=expanded;
-    const sign=button.querySelector('span:last-child');if(sign)sign.textContent=expanded?'+':'−';
-  });
-});
-const peopleGrid=document.getElementById('people-grid');
-if(peopleGrid){for(let i=0;i<442;i++){const dot=document.createElement('span');dot.className='person-mark';dot.setAttribute('aria-hidden','true');peopleGrid.appendChild(dot)}}
-const timelineScroller=document.getElementById('timeline-scroller');
+
 const timelineNodes=[...document.querySelectorAll('.timeline-node')];
 timelineNodes.forEach(button=>{
   button.addEventListener('click',()=>{
-    timelineNodes.forEach(node=>{node.classList.remove('is-active');node.setAttribute('aria-pressed','false')});
-    button.classList.add('is-active');button.setAttribute('aria-pressed','true');
-    document.getElementById('timeline-kicker').textContent=button.dataset.kicker;
-    document.getElementById('timeline-title').textContent=button.dataset.title;
-    document.getElementById('timeline-copy').textContent=button.dataset.copy;
-    document.getElementById('timeline-quote').textContent=button.dataset.quote;
-    document.getElementById('timeline-credit').textContent=button.dataset.credit;
-    if(timelineScroller){const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';timelineScroller.scrollTo({left:button.offsetLeft-(timelineScroller.clientWidth-button.clientWidth)/2,behavior})}
+    timelineNodes.forEach(node=>{
+      node.classList.remove('is-active');
+      node.setAttribute('aria-pressed','false');
+    });
+    button.classList.add('is-active');
+    button.setAttribute('aria-pressed','true');
+    const kicker=document.getElementById('timeline-kicker');
+    const title=document.getElementById('timeline-title');
+    const copy=document.getElementById('timeline-copy');
+    const quote=document.getElementById('timeline-quote');
+    const credit=document.getElementById('timeline-credit');
+    if(kicker) kicker.textContent=button.dataset.kicker||'';
+    if(title) title.textContent=button.dataset.title||'';
+    if(copy) copy.textContent=button.dataset.copy||'';
+    if(quote) quote.textContent='“'+(button.dataset.quote||'')+'”';
+    if(credit) credit.textContent=button.dataset.credit||'';
   });
 });
-function animateVerticalChart(container){container.querySelectorAll('.vcol').forEach(col=>{const value=Number(col.dataset.value);const bar=col.querySelector('.vbar');if(bar)bar.style.height=(value/45*100)+'%'})}
-const scrollObserver=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(!entry.isIntersecting)return;
-    entry.target.classList.add('visible');
-    if(entry.target.querySelector&&entry.target.querySelector('.vbar'))animateVerticalChart(entry.target);
-    scrollObserver.unobserve(entry.target);
+
+const coverScroll=document.getElementById('research-cover-scroll');
+const coverCopy=document.getElementById('research-cover-copy');
+const coverImage=coverScroll?coverScroll.querySelector('img'):null;
+function updateResearchCover(){
+  if(!coverScroll||!coverCopy)return;
+  const rect=coverScroll.getBoundingClientRect();
+  const travel=Math.max(1,coverScroll.offsetHeight-window.innerHeight);
+  const amount=Math.max(0,Math.min(1,-rect.top/travel));
+  coverCopy.style.opacity=String(Math.max(.04,amount));
+  coverCopy.style.transform='translateY('+(22*(1-amount))+'px)';
+  if(coverImage) coverImage.style.transform='scale('+(1+.045*amount)+')';
+}
+window.addEventListener('scroll',updateResearchCover,{passive:true});
+window.addEventListener('resize',updateResearchCover);
+updateResearchCover();
+
+document.querySelectorAll('.acc-button').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const panel=document.getElementById(button.getAttribute('aria-controls'));
+    if(!panel)return;
+    const expanded=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!expanded));
+    panel.hidden=expanded;
+    const sign=button.querySelector('span:last-child');
+    if(sign)sign.textContent=expanded?'+':'−';
   });
-},{threshold:.12});
-document.querySelectorAll('.reveal,.safe-card').forEach(el=>scrollObserver.observe(el));
-const chartWrap=document.getElementById('symptom-chart');
-if(chartWrap){const chartObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){animateVerticalChart(chartWrap);chartObserver.disconnect()}},{threshold:.1});chartObserver.observe(chartWrap)}
+});
+
+function animateVerticalChart(container){
+  container.querySelectorAll('.vcol').forEach(col=>{
+    const value=Number(col.dataset.value);
+    const bar=col.querySelector('.vbar');
+    if(bar)bar.style.height=(value/45*100)+'%';
+  });
+}
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.safe-question.reveal').forEach(el=>revealObserver.observe(el));
+
+  const chartWrap=document.getElementById('symptom-chart');
+  if(chartWrap){
+    const chartObserver=new IntersectionObserver(entries=>{
+      if(entries.some(entry=>entry.isIntersecting)){
+        animateVerticalChart(chartWrap);
+        chartObserver.disconnect();
+      }
+    },{threshold:.1});
+    chartObserver.observe(chartWrap);
+  }
+} else {
+  document.querySelectorAll('.safe-question.reveal').forEach(el=>el.classList.add('visible'));
+  const chartWrap=document.getElementById('symptom-chart');
+  if(chartWrap)animateVerticalChart(chartWrap);
+}
+if(reduceMotion){
+  const chartWrap=document.getElementById('symptom-chart');
+  if(chartWrap)animateVerticalChart(chartWrap);
+}
 </script>
 </body>
 </html>
